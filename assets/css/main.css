@@ -1198,7 +1198,7 @@ input[type="button"]:focus {
 }
 
 .button-follow {
-  border: 2px solid #c7c7c7;
+  border: 1px solid #c7c7c7;
   padding: 0 10px;
   border-radius: 5px;
   color: #30A6C7;
