@@ -1,0 +1,177 @@
+.page_name
+  width: 260px
+  color: #666
+  font-family: 'Roboto', sans-serif
+  font-weight: 300
+  font-size: 36px
+  letter-spacing: 1px
+  line-height: 1.5
+  margin-top: -30px
+  padding-left: 33px  
+
+.page_name:hover
+  color: #aaa
+
+.user_container
+  display: block
+  position: relative
+  width: 100%
+  height: auto
+  clear: both
+  padding: 0 10px
+  vertical-align: middle
+  text-align: center
+
+.author-profile--page
+  position: relative
+  width: 100%
+  height: auto
+  text-align: left
+
+.author-profile--avatar
+  position: inherit
+  display: inline-block
+  width: 100px
+  height: 100px
+  border-radius: 100%
+  vertical-align: middle
+  float: right
+  margin-right: 15px
+  border: 2px solid #666
+
+.author-name
+  width: 70%
+  position: inherit
+  font-family: 'Roboto', sans-serif
+  font-weight: 300
+  font-size: 40px
+
+.author-name .author-name--link
+  color: #666
+  &:hover
+    color: #aaa
+  &:active
+    color: #999
+
+.author-description
+  width: 60%
+  font-family: 'Roboto', sans-serif
+  font-weight: 300
+  font-size: 18px
+
+// -----------------
+
+.button-skills
+  color: #30A6C7
+  &:hover
+    color: #26839D
+  &:active
+    color: #26839D
+    border: 1px solid #26839D
+  &:focus
+    color: #26839D
+    border: 1px solid #26839D
+
+  &.--active
+    background-color: #30A6C7
+    color: $white
+    border: 1px solid #26839D
+
+.skill-container
+  position: relative
+  display: inline-block
+  width: 100%
+  height: auto
+
+.post-block
+  position: inherit
+  display: inline-block
+  width: 300px
+  height: 350px
+  border-radius: 2%
+  margin: 7px 10px 7px 11px
+  background-color: #FAFAFA
+  border: 2px solid #FAFAFA
+  transition: all .2s ease;
+  &:hover
+    border: 2px solid #ddd
+    transform: translate(5px, -5px)
+
+.post-block--header
+  font-family: 'Roboto', sans-serif
+  font-weight: 300
+  font-size: 22px
+  text-align: center
+  padding-top: 10px
+
+.post-block--img
+  width: 100%
+  height: auto
+  margin-bottom: 7px
+
+.post-block--description
+  font-family: 'Roboto', sans-serif
+  font-weight: 300
+  font-size: 18px
+  padding: 3px 7px 3px 7px
+
+.post-block--date
+  position: absolute
+  display: block
+  font-family: 'Roboto', sans-serif
+  font-weight: 300
+  font-size: 14px
+  left: 7px
+  bottom: 0px
+
+.post-block--link
+  position: absolute
+  bottom: 5px
+  right: 7px
+  font-family: 'Roboto', sans-serif
+  font-weight: 400
+  line-height: 38px
+  letter-spacing: .1rem
+  text-transform: uppercase
+  text-decoration: none
+  white-space: nowrap
+  font-size: 14px
+  padding: 0 30px
+  display: inline-block
+  height: 38px
+  background-color: transparent
+  color: #30A6C7
+  border-radius: 4px
+  border: 1px solid #bbb
+  cursor: pointer
+  box-sizing: border-box
+  &:hover
+    background-color: #30A6C7
+    border: 1px solid #26839D
+    color: $white
+  &:active
+    background-color: #30A6C7
+    border: 1px solid #26839D
+    color: $silver
+
+// --------
+
+.preloader
+  height: 100%
+  width: 100%
+  position: absolute
+  padding: 5px
+  background: #fff
+  opacity: 0
+  z-index: 999
+  transition: 0.3s
+  visibility: hidden
+
+.loaded
+  opacity: 1 !important
+  visibility: visible !important
+  
+
+
+
+

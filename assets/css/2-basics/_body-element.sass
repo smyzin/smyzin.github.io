@@ -1,0 +1,107 @@
+body
+  background-color: white
+  font-size: 17px
+  line-height: 1.1
+  font-family: 'Roboto', sans-serif
+  color: #666
+  -webkit-font-smoothing: antialiased
+  -webkit-text-size-adjust: 100%
+  overflow-x: hidden
+
+.card-wraper
+  min-width: 50%
+  width: 100%
+  max-width: 100%
+  height: auto
+  margin: auto
+  margin-top: -20px
+
+.card
+  min-width: 320px
+  width: 100%
+  max-width: 980px
+  height: auto
+  margin: auto
+  margin-top: 0px
+
+.header_card
+  width: (100% - 3%)
+  height: auto
+  padding: 0px 0px 0px 30px
+  clear: both
+  display: block
+  opacity: 1
+  transition: all 300ms ease-in-out
+
+.menu
+  position: fixed
+  width: calc(100% - 30px)
+  min-width: 320px
+  max-width: 980px
+  height: 55px
+  left: 50%
+  background-color: #fefefe
+  opacity: 1
+  z-index: 50
+  transform: translateX(-50%)
+  transition: .5s
+
+.menu--top
+  width: 100% !important
+  top: 0
+  max-width: 100%;
+  opacity: 0
+  border-bottom: 1px solid $light-gray
+
+.menu--top.hide 
+  transform: translateX(-50%) translateY(-100%)
+
+.menu .menu-cover
+  position:relative !important
+  display: block
+  width: (100% - 3%)
+  max-width: 960px
+  min-width: 320px
+  height: 55px
+  left: 50%
+  transform: translateX(-50%)
+
+.menu .logo-menu
+  width: 50px
+  height: 50px
+  position: absolute
+  top: 3px
+  left: 7px
+  z-index: 51
+
+.menu .title-menu
+  position: absolute
+  top: -5px
+  font-size: 30px
+  left: -42px
+  margin-left: 110px
+  z-index: 67
+
+.menu .header_text
+  position: absolute
+  top: 47px
+  left: 230px
+  font-size: 20px
+  z-index: 66
+
+.title
+  padding-left: 30px
+  letter-spacing: -1.5px
+  margin: 0.67em 0 0 0
+
+.logo
+  width: 50px
+  height: 50px
+  position: absolute
+  margin-left: -25px
+  margin-top: 11px
+  z-index: 35
+
+
+
+

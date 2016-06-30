@@ -1,0 +1,320 @@
+// -----------------------------
+.author-profile--top
+  position: relative
+  display: inline-block
+  height: 80px
+  padding-bottom: 10px
+
+.author-profile--medium
+  position: inherit
+  display: inline
+  font-family: 'Roboto', sans-serif
+  font-weight: 300
+  font-size: 19px
+  text-decoration: none
+  color: #aaa !important
+  cursor: pointer
+  line-height: normal
+  word-wrap: nowrap
+
+.author-profile--medium span
+  display: inline-block
+  padding-top: 18px
+  padding-left: 10px
+
+.author-profile--medium:hover span
+  color: #666
+  text-decoration: underline
+
+.avatar-image--top
+  display: inline-block
+  width: 36px
+  height: 36px
+  border-radius: 100%
+  vertical-align: middle
+
+.date
+  position: absolute
+  display: inline-block
+  color: $gray
+  font-size: 16px
+  font-weight: 300
+  padding-left: 47px
+// ------------------------------
+.devider
+  margin-top: -11px !important
+
+.picture
+  width: 100%
+  height: auto
+  text-align: center
+  margin: 0 auto
+  display: block
+  position: relative
+  padding-bottom: 10px
+
+.picture img
+  min-width: 100%
+  width: 100%
+  margin: auto
+  height: auto
+  position: relative
+  display: block
+  right: 0px
+  opacity: 0.8
+  transition: all 1000ms ease
+
+.picture img:hover
+  opacity: 1
+  transform: scale(1.01)
+
+.credit
+  font-family: 'Roboto'
+  padding-top: 10px
+  font-size: 12px
+  color: $gray
+  margin-right: 0px
+  margin-left: 0px
+
+.text
+  position: relative
+  min-width: 50%
+  max-width: 100%
+  padding-left: 25px
+  padding-right: 15px
+
+.header_text 
+  position: relative
+  color: #666
+  width: auto !important
+  font-family: 'Roboto', sans-serif
+  font-weight: 300
+  font-size: 36px
+  letter-spacing: 1px
+  line-height: 1.5
+  margin-top: -30px
+  padding-left: 33px
+
+.header_text:hover
+  color: #aaa
+
+.post--point
+  height: 1px
+  background: #676767
+  border: none
+  outline: none
+  margin: 35px 4em -10px 4em !important
+  position: relative
+
+.post--point:before
+  content: attr(data-symbol)
+  position: absolute
+  top: 0
+  left: 50%
+  background: #FFFFFF
+  color: #676767
+  transform: translate(-50%, -50%)
+  font-size: 2em
+  padding: 0.5em 1em
+  font-weight: lighter
+  font-family: Helvetica Neue
+
+.post--header
+  color: #666
+  width: auto !important
+  font-family: 'Roboto', sans-serif
+  font-weight: 300
+  font-size: 40px
+  letter-spacing: 1px
+  line-height: 1.5
+  text-align: center
+
+.post--text
+  z-index: 10
+  position: relative
+  font-family: 'Roboto', sans-serif
+  font-weight: 300
+  font-size: 22px
+  margin-bottom: 10px !important
+  padding-bottom: 15px
+  text-indent: 25px
+
+.post--headline
+  text-align: center
+
+.post--headline span
+  position: relative
+  font-family: 'Roboto', sans-serif
+  font-weight: 500
+  font-size: 28px
+  text-align: center
+  line-height: 55.5px
+
+.post--image img
+  position: inherit
+  max-width: 800px
+  max-height: 400px
+  min-width: 500px
+  min-height: 280px
+  text-indent: 0 !important
+
+.post--image
+  text-align: center
+
+#bottom
+  padding-top: 30px
+  position: relative
+  width: 70%
+  margin: auto
+
+.menu--bottom
+  bottom: 0
+  border-top: 1px solid $light-gray
+  border-left: 1px solid $light-gray
+  border-right: 1px solid $light-gray
+  border-top-left-radius: 4px
+  border-top-right-radius: 4px
+
+.menu--bottom.hide 
+  transform: translateX(-50%) translateY(100%)
+
+.menu--bottom .bottom-cover
+  position:relative !important
+  display: block
+  width: (100% - 3%)
+  max-width: 960px
+  min-width: 320px
+  height: 55px
+  left: 50%
+  transform: translateX(-50%)
+
+.left--menu_bottom
+  position: relative
+  width: auto
+  height: 55px
+  float: left
+
+.like--button
+  position: absolute
+  cursor: pointer
+  left: 0px
+  margin-top: 8px
+  height: 39px
+  width: 39px
+  padding-left: 0px
+  padding-right: 0px
+  border-radius: 100%
+  border: none
+  transition: .5s
+
+.like-svg
+  width: 36px
+  height: 36px
+  padding: 0px 0px 0px 0px
+
+.like--number
+  position: absolute
+  left: 40px
+  top: 18px
+  font-family: 'Roboto', sans-serif
+  font-weight: 400
+  font-size: 20px
+
+.right--menu_bottom
+  position: relative
+  width: auto
+  height: 55px
+  float: right
+
+.share--bottom
+  position: inherit
+  width: auto
+  height: 100%
+  float: left
+
+.button-inner
+  display: inline-block
+  margin-top: 8px
+  margin-bottom: 7px
+
+.button--dark
+  border: none
+  width: 40px
+  height: 40px
+  padding-left: 0px
+  border-radius: 100%
+  fill: #555
+
+.button--dark:hover
+  fill: #353535
+
+.separate
+  display: inline-block
+  vertical-align: middle
+  width: 2px
+  background-color: rgba(0, 0, 0, 0.5)
+  margin: 16px 16px 16px 0px
+  height: 24px
+  background: rgba(170,170,170,0.6)
+
+.author-profile
+  height: 100%
+  width: auto
+  float: right
+
+.author-profile--bottom
+  position: inherit
+  display: inline
+  font-family: 'Roboto', sans-serif
+  font-weight: 300
+  font-size: 16px
+  text-decoration: none
+  color: #aaa
+  cursor: pointer
+  line-height: normal
+  word-wrap: nowrap
+
+.author-profile--bottom span
+  display: inline-block
+  padding-top: 18px
+  padding-left: 10px
+
+.author-profile--bottom:hover span
+  color: #666
+  text-decoration: underline
+
+.avatar-image--bottom
+  display: inline-block
+  width: 24px
+  height: 24px
+  border-radius: 100%
+  vertical-align: middle
+
+.author-profile--follow
+  position: inherit
+  display: inline
+  padding-left: 5px
+
+.button-follow
+  border: 2px solid $light-gray
+  padding: 0 10px
+  border-radius: 5px
+  color: #30A6C7
+  font-weight: 400
+  font-size: 13px
+  &:hover
+    background-color: #30A6C7
+    border: 1px solid #26839D
+    & span
+      color: $white !important
+  &:active
+    background-color: #30A6C7
+    border: 1px solid #26839D
+    & span
+      color: $silver !important
+    
+.author-follow span
+  font-weight: 400
+
+.button-follow:hover span
+  color: #666
