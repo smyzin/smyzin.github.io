@@ -28,57 +28,83 @@ html
 							p.author-description Web-frontend (CSS3, HTML5, JS), Backend (Python, Ruby), IT-specialist 
 							
 						div.author-profile--information
-							button.button-skills.--active(title='CSS3', arial-label='CSS3')
-								span CSS3
-							button.button-skills(title='HTML5', arial-label='HTML5')
-								span HTML5
-							button.button-skills(title='Python', arial-label='Python')
+							button.button-skills.--active(title='All', arial-label='All', data-tag='all')
+								span All
+							button.button-skills(title='Landing Page', arial-label='Landing Page', data-tag='lp')
+								span Landing Page
+							button.button-skills(title='CodePen', arial-label='CodePen', data-tag='codepen')
+								span CodePen
+							button.button-skills(title='Python', arial-label='Python', data-tag='python')
 								span Python
-							button.button-skills(title='Ruby', arial-label='Ruby')
+							button.button-skills(title='Ruby', arial-label='Ruby', data-tag='ruby')
 								span Ruby
 						hr.devider(style='margin-top: 20px !important;')
-						div.skill-container
+						div.skill-container(data-view-tag="all")
 							//- div.round
 							div.preloader
 							div.spinners
 								div.row
 									div.spinner.spinner-bounce-bottom
-							div.post-block
+							div.post-block(data-view="codepen")
+								p.post-block--header Futurama
+								img.post-block--img(src='/assets/img/futurama-post.png')
+								p.post-block--description Futurama Tribute Page tell us about the main characters of this serial
+								p.post-block--tags Sass, Jade
+								a.post-block--link(href='/posts/assassins-creed-unity.html', title='More about the post', arial-label='More about the post') More
+							div.post-block(data-view="lp")
 								p.post-block--header Assassin’s Creed: Unity
 								img.post-block--img(src='https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg')
-								p.post-block--description Проводим глубокий анализ игры Assassin’s Creed: Unity (геймплей, механика и т.д.)
-								p.post-block--date 09.04.2016
-								a.post-block--link(href='/posts/assassins-creed-unity.html', title='Read the post', arial-label='Read the post') Read
-							div.post-block
-								p.post-block--header Assassin’s Creed: Unity
-								img.post-block--img(src='https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg')
-								p.post-block--description Проводим глубокий анализ игры Assassin’s Creed: Unity (геймплей, механика и т.д.)
-								p.post-block--date 09.04.2016
-								a.post-block--link(href='/posts/assassins-creed-unity.html', title='Read the post', arial-label='Read the post') Read
-							div.post-block
-								p.post-block--header Assassin’s Creed: Unity
-								img.post-block--img(src='https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg')
-								p.post-block--description Проводим глубокий анализ игры Assassin’s Creed: Unity (геймплей, механика и т.д.)
-								p.post-block--date 09.04.2016
-								a.post-block--link(href='/posts/assassins-creed-unity.html', title='Read the post', arial-label='Read the post') Read
-							div.post-block
-								p.post-block--header Assassin’s Creed: Unity
-								img.post-block--img(src='https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg')
-								p.post-block--description Проводим глубокий анализ игры Assassin’s Creed: Unity (геймплей, механика и т.д.)
-								p.post-block--date 09.04.2016
-								a.post-block--link(href='/posts/assassins-creed-unity.html', title='Read the post', arial-label='Read the post') Read
-							div.post-block
-								p.post-block--header Assassin’s Creed: Unity
-								img.post-block--img(src='https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg')
-								p.post-block--description Проводим глубокий анализ игры Assassin’s Creed: Unity (геймплей, механика и т.д.)
-								p.post-block--date 09.04.2016
-								a.post-block--link(href='/posts/assassins-creed-unity.html', title='Read the post', arial-label='Read the post') Read
-							div.post-block
-								p.post-block--header Assassin’s Creed: Unity
-								img.post-block--img(src='https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg')
-								p.post-block--description Проводим глубокий анализ игры Assassin’s Creed: Unity (геймплей, механика и т.д.)
-								p.post-block--date 09.04.2016
-								a.post-block--link(href='/posts/assassins-creed-unity.html', title='Read the post', arial-label='Read the post') Read
+								p.post-block--description Проводим глубокий анализ игры Assassin’s Creed: Unity
+								p.post-block--tags CSS3
+								a.post-block--link(href='/posts/assassins-creed-unity.html', title='More about the post', arial-label='More about the post') More
+							div.post-block(data-view="codepen")
+								p.post-block--header Illustration
+								img.post-block--img(src='/assets/img/earth_illustration-post.png')
+								p.post-block--description Animated Earth Illustration only with CSS and HTML (without any JS)
+								p.post-block--tags Sass, Jade
+								a.post-block--link(href='/posts/assassins-creed-unity.html', title='More about the post', arial-label='More about the post') More
+							div.post-block(data-view="codepen")
+								p.post-block--header Twitter widget
+								img.post-block--img(src='/assets/img/twitter-post.png')
+								p.post-block--description Redesign a small twitter widget based on Dribbble Illustration
+								p.post-block--tags Sass, Jade
+								a.post-block--link(href='/posts/assassins-creed-unity.html', title='More about the post', arial-label='More about the post') More
+							div.post-block(data-view="codepen")
+								p.post-block--header Registration card
+								img.post-block--img(src='/assets/img/egistration_card-post.png')
+								p.post-block--description Code registration card based on Dribbble Illustration
+								p.post-block--tags Sass, Jade
+								a.post-block--link(href='/posts/assassins-creed-unity.html', title='More about the post', arial-label='More about the post') More
+							//- div.post-block
+							//- 	p.post-block--header Assassin’s Creed: Unity
+							//- 	img.post-block--img(src='https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg')
+							//- 	p.post-block--description Проводим глубокий анализ игры Assassin’s Creed: Unity (геймплей, механика и т.д.)
+							//- 	p.post-block--date 09.04.2016
+							//- 	a.post-block--link(href='/posts/assassins-creed-unity.html', title='Read the post', arial-label='Read the post') Read
+							//- div.post-block
+							//- 	p.post-block--header Assassin’s Creed: Unity
+							//- 	img.post-block--img(src='https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg')
+							//- 	p.post-block--description Проводим глубокий анализ игры Assassin’s Creed: Unity (геймплей, механика и т.д.)
+							//- 	p.post-block--date 09.04.2016
+							//- 	a.post-block--link(href='/posts/assassins-creed-unity.html', title='Read the post', arial-label='Read the post') Read
+							//- div.post-block
+							//- 	p.post-block--header Assassin’s Creed: Unity
+							//- 	img.post-block--img(src='https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg')
+							//- 	p.post-block--description Проводим глубокий анализ игры Assassin’s Creed: Unity (геймплей, механика и т.д.)
+							//- 	p.post-block--date 09.04.2016
+							//- 	a.post-block--link(href='/posts/assassins-creed-unity.html', title='Read the post', arial-label='Read the post') Read
+							//- div.post-block
+							//- 	p.post-block--header Assassin’s Creed: Unity
+							//- 	img.post-block--img(src='https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg')
+							//- 	p.post-block--description Проводим глубокий анализ игры Assassin’s Creed: Unity (геймплей, механика и т.д.)
+							//- 	p.post-block--date 09.04.2016
+							//- 	a.post-block--link(href='/posts/assassins-creed-unity.html', title='Read the post', arial-label='Read the post') Read
+							//- div.post-block
+							//- 	p.post-block--header Assassin’s Creed: Unity
+							//- 	img.post-block--img(src='https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg')
+							//- 	p.post-block--description Проводим глубокий анализ игры Assassin’s Creed: Unity (геймплей, механика и т.д.)
+							//- 	p.post-block--date 09.04.2016
+							//- 	a.post-block--link(href='/posts/assassins-creed-unity.html', title='Read the post', arial-label='Read the post') Read
 
 
 						//- div.option_block

@@ -10,35 +10,6 @@
     <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet"/>
   </head>
   <body class="post">
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-      (function (d, w, c) {
-          (w[c] = w[c] || []).push(function() {
-              try {
-                  w.yaCounter38250160 = new Ya.Metrika({
-                      id:38250160,
-                      clickmap:true,
-                      trackLinks:true,
-                      accurateTrackBounce:true,
-                      webvisor:true
-                  });
-              } catch(e) { }
-          });
-
-          var n = d.getElementsByTagName("script")[0],
-              s = d.createElement("script"),
-              f = function () { n.parentNode.insertBefore(s, n); };
-          s.type = "text/javascript";
-          s.async = true;
-          s.src = "https://mc.yandex.ru/metrika/watch.js";
-
-          if (w.opera == "[object Opera]") {
-              d.addEventListener("DOMContentLoaded", f, false);
-          } else { f(); }
-      })(document, window, "yandex_metrika_callbacks");
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/38250160" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <div class="card-wraper">
       <div class="card">
         <div class="header_card"><img src="/assets/img/logo.gif" class="logo"/>
@@ -57,49 +28,46 @@
               <p class="author-description">Web-frontend (CSS3, HTML5, JS), Backend (Python, Ruby), IT-specialist </p>
             </div>
             <div class="author-profile--information">
-              <button title="CSS3" arial-label="CSS3" class="button-skills --active"><span>CSS3</span></button>
-              <button title="HTML5" arial-label="HTML5" class="button-skills"><span>HTML5</span></button>
-              <button title="Python" arial-label="Python" class="button-skills"><span>Python</span></button>
-              <button title="Ruby" arial-label="Ruby" class="button-skills"><span>Ruby</span></button>
+              <button title="All" arial-label="All" data-tag="all" class="button-skills --active"><span>All</span></button>
+              <button title="Landing Page" arial-label="Landing Page" data-tag="lp" class="button-skills"><span>Landing Page</span></button>
+              <button title="CodePen" arial-label="CodePen" data-tag="codepen" class="button-skills"><span>CodePen</span></button>
+              <button title="Python" arial-label="Python" data-tag="python" class="button-skills"><span>Python</span></button>
+              <button title="Ruby" arial-label="Ruby" data-tag="ruby" class="button-skills"><span>Ruby</span></button>
             </div>
             <hr style="margin-top: 20px !important;" class="devider"/>
-            <div class="skill-container">
+            <div data-view-tag="all" class="skill-container">
               <div class="preloader"></div>
               <div class="spinners">
                 <div class="row">
                   <div class="spinner spinner-bounce-bottom"></div>
                 </div>
               </div>
-              <div class="post-block">
-                <p class="post-block--header">Assassin’s Creed: Unity</p><img src="https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg" class="post-block--img"/>
-                <p class="post-block--description">Проводим глубокий анализ игры Assassin’s Creed: Unity (геймплей, механика и т.д.)</p>
-                <p class="post-block--date">09.04.2016</p><a href="/posts/assassins-creed-unity.html" title="Read the post" arial-label="Read the post" class="post-block--link">Read</a>
+              <div data-view="codepen" class="post-block">
+                <p class="post-block--header">Futurama</p><img src="/assets/img/futurama-post.png" class="post-block--img"/>
+                <p class="post-block--description">Futurama Tribute Page tell us about the main characters of this serial</p>
+                <p class="post-block--tags">Sass, Jade</p><a href="/posts/assassins-creed-unity.html" title="More about the post" arial-label="More about the post" class="post-block--link">More</a>
               </div>
-              <div class="post-block">
+              <div data-view="lp" class="post-block">
                 <p class="post-block--header">Assassin’s Creed: Unity</p><img src="https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg" class="post-block--img"/>
-                <p class="post-block--description">Проводим глубокий анализ игры Assassin’s Creed: Unity (геймплей, механика и т.д.)</p>
-                <p class="post-block--date">09.04.2016</p><a href="/posts/assassins-creed-unity.html" title="Read the post" arial-label="Read the post" class="post-block--link">Read</a>
+                <p class="post-block--description">Проводим глубокий анализ игры Assassin’s Creed: Unity</p>
+                <p class="post-block--tags">CSS3</p><a href="/posts/assassins-creed-unity.html" title="More about the post" arial-label="More about the post" class="post-block--link">More</a>
               </div>
-              <div class="post-block">
-                <p class="post-block--header">Assassin’s Creed: Unity</p><img src="https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg" class="post-block--img"/>
-                <p class="post-block--description">Проводим глубокий анализ игры Assassin’s Creed: Unity (геймплей, механика и т.д.)</p>
-                <p class="post-block--date">09.04.2016</p><a href="/posts/assassins-creed-unity.html" title="Read the post" arial-label="Read the post" class="post-block--link">Read</a>
+              <div data-view="codepen" class="post-block">
+                <p class="post-block--header">Illustration</p><img src="/assets/img/earth_illustration-post.png" class="post-block--img"/>
+                <p class="post-block--description">Animated Earth Illustration only with CSS and HTML (without any JS)</p>
+                <p class="post-block--tags">Sass, Jade</p><a href="/posts/assassins-creed-unity.html" title="More about the post" arial-label="More about the post" class="post-block--link">More</a>
               </div>
-              <div class="post-block">
-                <p class="post-block--header">Assassin’s Creed: Unity</p><img src="https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg" class="post-block--img"/>
-                <p class="post-block--description">Проводим глубокий анализ игры Assassin’s Creed: Unity (геймплей, механика и т.д.)</p>
-                <p class="post-block--date">09.04.2016</p><a href="/posts/assassins-creed-unity.html" title="Read the post" arial-label="Read the post" class="post-block--link">Read</a>
+              <div data-view="codepen" class="post-block">
+                <p class="post-block--header">Twitter widget</p><img src="/assets/img/twitter-post.png" class="post-block--img"/>
+                <p class="post-block--description">Redesign a small twitter widget based on Dribbble Illustration</p>
+                <p class="post-block--tags">Sass, Jade</p><a href="/posts/assassins-creed-unity.html" title="More about the post" arial-label="More about the post" class="post-block--link">More</a>
               </div>
-              <div class="post-block">
-                <p class="post-block--header">Assassin’s Creed: Unity</p><img src="https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg" class="post-block--img"/>
-                <p class="post-block--description">Проводим глубокий анализ игры Assassin’s Creed: Unity (геймплей, механика и т.д.)</p>
-                <p class="post-block--date">09.04.2016</p><a href="/posts/assassins-creed-unity.html" title="Read the post" arial-label="Read the post" class="post-block--link">Read</a>
+              <div data-view="codepen" class="post-block">
+                <p class="post-block--header">Registration Card</p><img src="/assets/img/egistration_card-post.png" class="post-block--img"/>
+                <p class="post-block--description">Code registration card based on Dribbble Illustration</p>
+                <p class="post-block--tags">Sass, Jade</p><a href="/posts/assassins-creed-unity.html" title="More about the post" arial-label="More about the post" class="post-block--link">More</a>
               </div>
-              <div class="post-block">
-                <p class="post-block--header">Assassin’s Creed: Unity</p><img src="https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg" class="post-block--img"/>
-                <p class="post-block--description">Проводим глубокий анализ игры Assassin’s Creed: Unity (геймплей, механика и т.д.)</p>
-                <p class="post-block--date">09.04.2016</p><a href="/posts/assassins-creed-unity.html" title="Read the post" arial-label="Read the post" class="post-block--link">Read</a>
-              </div>
+              
             </div>
           </div>
         </div>

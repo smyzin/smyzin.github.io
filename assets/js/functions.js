@@ -99,23 +99,44 @@ $( document ).ready(function() {
 	});
 	
 	$(function(){
+		function tab (s) {
+			switch(s) {
+				case 'all':
+					$('.post-block').show();
+					break;
+				case 'lp':
+					$(".post-block").filter("[data-view='lp']").show();
+					break;
+				case 'codepen':
+					$(".post-block").filter("[data-view='codepen']").show();
+					break;
+				case 'python':
+					$(".post-block").filter("[data-view='python']").show();
+					break;
+				case 'ruby':
+					$(".post-block").filter("[data-view='ruby']").show();
+					break;
+				default:
+					$('.post-block').show();
+					break;
+			};
+		};
 		$('.button-skills').click(function() {
-			// e.preventDefault();
+			$('.post-block').hide();
 			$('.button-skills').removeClass('--active');
 			$(this).addClass('--active');
-			var bt = $(this).attr('title');
-			$('.skill-container').addClass(bt);
+			// ------
+
+			var bt = $(this).attr('data-tag');
+			$('.skill-container').attr('data-view-tag', bt);
 			// ------
 			$('.spinners').addClass('loaded');
 			$('.preloader').addClass('loaded');
 			setTimeout(function(){
+				tab(bt);
 				$('.spinners').removeClass('loaded');
 				$('.preloader').removeClass('loaded');
 			}, 1500);
-			// if (bt == 'css3') {
-			// 	$(this).addClass(bt);
-			// };
-
 		});
 	});
 
