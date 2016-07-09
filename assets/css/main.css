@@ -439,7 +439,7 @@ body {
 
 .header_card {
   width: 97%;
-  height: auto;
+  height: 50px;
   padding: 0px 0px 0px 30px;
   clear: both;
   display: block;
@@ -511,17 +511,16 @@ body {
 }
 
 .title {
-  padding-left: 30px;
+  padding-left: 27px;
   letter-spacing: -1.5px;
-  margin: 0.67em 0 0 0;
+  font-size: 2.7em;
 }
 
 .logo {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   position: absolute;
-  margin-left: -25px;
-  margin-top: 11px;
+  margin-left: -20px;
   z-index: 35;
 }
 
@@ -677,7 +676,6 @@ input[type="button"]:focus {
   width: 100%;
   height: auto;
   clear: both;
-  padding: 0 10px;
   vertical-align: middle;
   text-align: center;
 }
@@ -686,6 +684,7 @@ input[type="button"]:focus {
   position: relative;
   width: 100%;
   height: auto;
+  padding: 0 10px;
   text-align: left;
 }
 
@@ -726,10 +725,104 @@ input[type="button"]:focus {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 18px;
+  line-height: 1.3;
+  text-indent: 1rem;
+  padding-left: .5rem;
+}
+
+.skills-preview {
+  width: 100%;
+  min-width: 320px;
+  padding: 0 10px;
+}
+
+.skills-preview__list {
+  list-style: none;
+  text-align: left;
+  padding-left: 0;
+}
+
+.skills-preview__list li {
+  display: block;
+  position: relative;
+  margin-bottom: 7px;
+}
+
+.skills-preview__list li i {
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.skills-preview__list li span {
+  display: inline-block;
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+
+.skills-preview__list li .item-progress {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 1.2rem;
+  width: calc(100% - 170px);
+  margin-right: 7px;
+  min-width: 300px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.skills-preview__list li .item-progress .progress {
+  position: inherit;
+  height: inherit;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+  background: repeating-linear-gradient(-50deg, #30A6C7, #30A6C7 10px, #47b8e0 10px, #47b8e0 20px);
+}
+
+.skills-preview__list li .item-progress .progress[data-progress='html'] {
+  width: 100%;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+.skills-preview__list li .item-progress .progress[data-progress='css'] {
+  width: 100%;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+.skills-preview__list li .item-progress .progress[data-progress='js'] {
+  width: 35%;
+}
+
+.skills-preview__list li .item-progress .progress[data-progress='python'] {
+  width: 45%;
+}
+
+.skills-preview__list li .item-progress .progress[data-progress='ruby'] {
+  width: 10%;
+}
+
+.skills-preview__list li .item-progress .progress[data-progress='ror'] {
+  width: 5%;
+}
+
+.item {
+  display: block;
+  margin-right: 5px;
+  width: 51px;
+}
+
+.persent-prog {
+  position: absolute;
+  top: 5%;
+  z-index: 21;
+  font-weight: 400 !important;
+  left: 8rem;
 }
 
 .button-skills {
   color: #30A6C7;
+  margin: 0 5px 7px 0;
 }
 
 .button-skills:hover {
@@ -766,15 +859,15 @@ input[type="button"]:focus {
   width: 300px;
   height: 350px;
   border-radius: 2%;
-  margin: 7px 9px 7px 9px;
+  margin: 6px 0px 6px 8px;
+  border: 1px solid #FAFAFA;
   background-color: #FAFAFA;
-  border: 2px solid #FAFAFA;
   transition: all .2s ease;
 }
 
 .post-block:hover {
-  border: 2px solid #ddd;
-  transform: translate(5px, -5px);
+  border: 1px solid #ddd;
+  transform: translate(3px, -5px);
 }
 
 .post-block--header {
@@ -1314,12 +1407,4 @@ input[type="button"]:focus {
 
 .spinner-bounce-bottom:after {
   animation: bounce-bottom 0.6s ease 0.2s infinite;
-}
-
-#world {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: linear-gradient(#e4e0ba, #f7d9aa);
 }

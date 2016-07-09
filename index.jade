@@ -2,13 +2,51 @@ html
 	head
 		meta(charset='UTF-8')
 		meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
-		meta(name='description', content='favicon.ico')
-		title DM | Main
-		link(rel='shortcut icon', href='favicon.ico')
+		meta(name='description', content='Portfolio site of Sergei Myzin')
+		meta(name="robots", content="noindex")
+		meta(name="author", content="Sergei Myzin")
+		title DM | @smyzin
 		link(rel='stylesheet', href='/assets/css/main.css')
 		link(href='http://fonts.googleapis.com/css?family=Lato', rel='stylesheet')
+		link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css")
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.3.0/font-mfizz.css")
+		script(type='text/javascript').
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-80514391-1', 'auto');
+			ga('send', 'pageview');
 
 	body.post
+		//- <!-- Yandex.Metrika counter -->
+		script(type="text/javascript").
+			(function (d, w, c) {
+				(w[c] = w[c] || []).push(function() {
+					try {
+						w.yaCounter38250160 = new Ya.Metrika({
+							id:38250160,
+							clickmap:true,
+							trackLinks:true,
+							accurateTrackBounce:true,
+							webvisor:true
+						});
+					} catch(e) { }
+				});
+				var n = d.getElementsByTagName("script")[0],
+					s = d.createElement("script"),
+					f = function () { n.parentNode.insertBefore(s, n); };
+				s.type = "text/javascript";
+				s.async = true;
+				s.src = "https://mc.yandex.ru/metrika/watch.js";
+				if (w.opera == "[object Opera]") {
+					d.addEventListener("DOMContentLoaded", f, false);
+				} else { f(); }
+			})(document, window, "yandex_metrika_callbacks");
+		noscript
+			div
+				img(src="https://mc.yandex.ru/watch/38250160" style="position:absolute; left:-9999px;" alt="")
+		//- <!-- /Yandex.Metrika counter -->
 		div.card-wraper
 			div.card
 				div.header_card
@@ -25,18 +63,58 @@ html
 							img(src="/assets/img/pic.jpeg" class="author-profile--avatar" alt="Profile of Myzin Sergei")
 							h1.author-name
 								a(href='/@Myzin.html', title="Profile of Myzin Sergei", aria-label="Profile of Myzin Sergei").author-name--link Myzin Sergei
-							p.author-description Web-frontend (CSS3, HTML5, JS), Backend (Python, Ruby), IT-specialist 
-							
-						div.author-profile--information
+							p.author-description I am a self-taught developer and already I can't get enough of coding. My favorite tools are Sass, Jade, jQuery if we consider front-end development. In Back-end I use Python and learn Ruby (of course with relevant frameworks) because I am fully convinced that this tools are the most powerful than others.
+							p.author-description Also I have some experience in Illustration and PhotoShop and once in a blue moon I draw some for myself.
+						
+						div.skills-preview
+							ul.skills-preview__list
+								li
+									i.fa.fa-html5
+									span.item HTML
+									div.item-progress
+										div.progress(data-progress='html')
+									span.persent-prog 100%
+								li
+									i.fa.fa-css3
+									span.item CSS
+									div.item-progress
+										div.progress(data-progress='css')
+									span.persent-prog 100%
+								li
+									i.icon-python
+									span.item Python
+									div.item-progress
+										div.progress(data-progress='python')
+									span.persent-prog 45%
+								li
+									i.icon-javascript
+									span.item JS
+									div.item-progress
+										div.progress(data-progress='js')
+									span.persent-prog 35%
+								li
+									i.icon-ruby
+									span.item Ruby
+									div.item-progress
+										div.progress(data-progress='ruby')
+									span.persent-prog 10%
+								li
+									i.icon-ruby-on-rails
+									span.item ROR
+									div.item-progress
+										div.progress(data-progress='ror')
+									span.persent-prog 5%
+
+						div.author-profile--information(id='buttons-nav')
 							button.button-skills.--active(title='All', arial-label='All', data-tag='all')
 								span All
 							button.button-skills(title='Landing Page', arial-label='Landing Page', data-tag='lp')
 								span Landing Page
 							button.button-skills(title='CodePen', arial-label='CodePen', data-tag='codepen')
 								span CodePen
-							button.button-skills(title='Python', arial-label='Python', data-tag='python')
+							button.button-skills(title='Python', arial-label='Python', data-tag='python', style="display: none;")
 								span Python
-							button.button-skills(title='Ruby', arial-label='Ruby', data-tag='ruby')
+							button.button-skills(title='Ruby', arial-label='Ruby', data-tag='ruby', style="display: none;")
 								span Ruby
 						hr.devider(style='margin-top: 20px !important;')
 						div.skill-container(data-view-tag="all")
@@ -50,61 +128,31 @@ html
 								img.post-block--img(src='/assets/img/futurama-post.png')
 								p.post-block--description Futurama Tribute Page tell us about the main characters of this serial
 								p.post-block--tags Sass, Jade
-								a.post-block--link(href='/posts/assassins-creed-unity.html', title='More about the post', arial-label='More about the post') More
+								a.post-block--link(href='#', title='More about the post', arial-label='More about the post') More
 							div.post-block(data-view="lp")
 								p.post-block--header Assassin’s Creed: Unity
 								img.post-block--img(src='https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg')
 								p.post-block--description Проводим глубокий анализ игры Assassin’s Creed: Unity
 								p.post-block--tags CSS3
-								a.post-block--link(href='/posts/assassins-creed-unity.html', title='More about the post', arial-label='More about the post') More
+								a.post-block--link(href='#', title='More about the post', arial-label='More about the post') More
 							div.post-block(data-view="codepen")
 								p.post-block--header Illustration
 								img.post-block--img(src='/assets/img/earth_illustration-post.png')
 								p.post-block--description Animated Earth Illustration only with CSS and HTML (without any JS)
 								p.post-block--tags Sass, Jade
-								a.post-block--link(href='/posts/assassins-creed-unity.html', title='More about the post', arial-label='More about the post') More
+								a.post-block--link(href='#', title='More about the post', arial-label='More about the post') More
 							div.post-block(data-view="codepen")
 								p.post-block--header Twitter widget
 								img.post-block--img(src='/assets/img/twitter-post.png')
 								p.post-block--description Redesign a small twitter widget based on Dribbble Illustration
 								p.post-block--tags Sass, Jade
-								a.post-block--link(href='/posts/assassins-creed-unity.html', title='More about the post', arial-label='More about the post') More
+								a.post-block--link(href='#', title='More about the post', arial-label='More about the post') More
 							div.post-block(data-view="codepen")
 								p.post-block--header Registration card
 								img.post-block--img(src='/assets/img/egistration_card-post.png')
 								p.post-block--description Code registration card based on Dribbble Illustration
 								p.post-block--tags Sass, Jade
-								a.post-block--link(href='/posts/assassins-creed-unity.html', title='More about the post', arial-label='More about the post') More
-							//- div.post-block
-							//- 	p.post-block--header Assassin’s Creed: Unity
-							//- 	img.post-block--img(src='https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg')
-							//- 	p.post-block--description Проводим глубокий анализ игры Assassin’s Creed: Unity (геймплей, механика и т.д.)
-							//- 	p.post-block--date 09.04.2016
-							//- 	a.post-block--link(href='/posts/assassins-creed-unity.html', title='Read the post', arial-label='Read the post') Read
-							//- div.post-block
-							//- 	p.post-block--header Assassin’s Creed: Unity
-							//- 	img.post-block--img(src='https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg')
-							//- 	p.post-block--description Проводим глубокий анализ игры Assassin’s Creed: Unity (геймплей, механика и т.д.)
-							//- 	p.post-block--date 09.04.2016
-							//- 	a.post-block--link(href='/posts/assassins-creed-unity.html', title='Read the post', arial-label='Read the post') Read
-							//- div.post-block
-							//- 	p.post-block--header Assassin’s Creed: Unity
-							//- 	img.post-block--img(src='https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg')
-							//- 	p.post-block--description Проводим глубокий анализ игры Assassin’s Creed: Unity (геймплей, механика и т.д.)
-							//- 	p.post-block--date 09.04.2016
-							//- 	a.post-block--link(href='/posts/assassins-creed-unity.html', title='Read the post', arial-label='Read the post') Read
-							//- div.post-block
-							//- 	p.post-block--header Assassin’s Creed: Unity
-							//- 	img.post-block--img(src='https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg')
-							//- 	p.post-block--description Проводим глубокий анализ игры Assassin’s Creed: Unity (геймплей, механика и т.д.)
-							//- 	p.post-block--date 09.04.2016
-							//- 	a.post-block--link(href='/posts/assassins-creed-unity.html', title='Read the post', arial-label='Read the post') Read
-							//- div.post-block
-							//- 	p.post-block--header Assassin’s Creed: Unity
-							//- 	img.post-block--img(src='https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg')
-							//- 	p.post-block--description Проводим глубокий анализ игры Assassin’s Creed: Unity (геймплей, механика и т.д.)
-							//- 	p.post-block--date 09.04.2016
-							//- 	a.post-block--link(href='/posts/assassins-creed-unity.html', title='Read the post', arial-label='Read the post') Read
+								a.post-block--link(href='#', title='More about the post', arial-label='More about the post') More
 
 
 						//- div.option_block
