@@ -2,25 +2,55 @@ html
 	head
 		meta(charset='UTF-8')
 		meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
-		meta(name='description', content='favicon.ico')
-		title DM | Анализ: Assassin’s Creed: Unity
-		link(rel='shortcut icon', href='favicon.ico')
+		title DM | Page view
+		meta(name='description', content='Portfolio site of Sergei Myzin')
+		meta(name="robots", content="noindex")
+		meta(name="author", content="Sergei Myzin")
 		link(rel='stylesheet', href='/assets/css/main.css')
 		script(src='https://code.jquery.com/jquery-1.12.3.min.js')
 		script(type='text/javascript', src='/assets/js/functions.js')
+		script(type='text/javascript').
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-80514391-1', 'auto');
+			ga('send', 'pageview');
 
 	body.post
+		//- <!-- Yandex.Metrika counter -->
+		script(type="text/javascript").
+			(function (d, w, c) {
+				(w[c] = w[c] || []).push(function() {
+					try {
+						w.yaCounter38250160 = new Ya.Metrika({
+							id:38250160,
+							clickmap:true,
+							trackLinks:true,
+							accurateTrackBounce:true,
+							webvisor:true
+						});
+					} catch(e) { }
+				});
+				var n = d.getElementsByTagName("script")[0],
+					s = d.createElement("script"),
+					f = function () { n.parentNode.insertBefore(s, n); };
+				s.type = "text/javascript";
+				s.async = true;
+				s.src = "https://mc.yandex.ru/metrika/watch.js";
+				if (w.opera == "[object Opera]") {
+					d.addEventListener("DOMContentLoaded", f, false);
+				} else { f(); }
+			})(document, window, "yandex_metrika_callbacks");
+		noscript
+			div
+				img(src="https://mc.yandex.ru/watch/38250160" style="position:absolute; left:-9999px;" alt="")
+		//- <!-- /Yandex.Metrika counter -->
 		div.card-wraper
 			div.card
 				div.header_card
 					img(src='/assets/img/logo.gif').logo
 					h1.title DevMonkeys
-					div.author-profile--top
-						a.author-profile--medium(href='/@Myzin.html', title='Profile of Myzin Sergei', arial-label='Profile of Myzin Sergei')
-							img(src="/assets/img/pic.jpeg" class="avatar-image--top" alt="Profile of Myzin Sergei")
-							span Myzin Sergei
-						p.date 09.04.2016
-					//- h3.header_text АНАЛИЗ: ASSASSIN’S CREED: UNITY
 				div.menu.menu--top
 					div.menu-cover
 						img(src='/assets/img/logo.gif').logo-menu
@@ -45,23 +75,23 @@ html
 							p.post--text Переход на новое поколение консолей позволил в несколько раз увеличить размер игрового мира, детализацию окружения, а также дальность его прорисовки. В этом плане  Assassin’s Creed: Unity впечатляет — количество узнаваемых достопримечательностей (основанных на реальных памятниках архитектуры) в кадре просто зашкаливает. Спасибо отличной модульной системе и процедурной генерации зданий — разработчикам удалось вытянуть большой высоко детализированный мир в короткие сроки.
 							
 							p.post--image
-								img(src='http://level-design.ru/wp-content/uploads/2016/04/06.jpg', srcset='https://level-design.ru/wp-content/uploads/2016/04/06.jpg 1600w, https://level-design.ru/wp-content/uploads/2016/04/06-300x150.jpg 300w, https://level-design.ru/wp-content/uploads/2016/04/06-500x250.jpg 500w, https://level-design.ru/wp-content/uploads/2016/04/06-1200x600.jpg 1200w')
+								img(src='https://level-design.ru/wp-content/uploads/2016/04/06-1200x600.jpg')
 							
 							p.post--text Особенно мозг взрывается после того, когда внезапно выясняется, что увеличение размеров игрового мира позволило сделать реалистичный масштаб зданий один к одному. В следствии чего каждая локация превратилась в полноценный отдельный уровень с кучей интерьеров, подземных ходов, а также множеством альтернативных путей для исследования.
 							p.post--text Собор Нотр-Дам, Тюрьма Бастилия, Лувр, Версальский дворец и другие известные достопримечательности сражают наповал своей эпичностью и детализацией, что сильнейшим образом влияет на ощущение погружения. По Парижу 18-го века хочется гулять часами и тупо смотреть по сторонам. Последний раз масштаб игрового мира меня так сильно впечатлил только в GTA V.
 							
 							p.post--image
-								img(src='http://level-design.ru/wp-content/uploads/2016/04/09.jpg')
+								img(src='http://level-design.ru/wp-content/uploads/2016/04/09-1200x600.jpg')
 							
 							p.post--text Количество доступных интерьеров в зданиях возросло в разы. Если раньше всё ограничивались парочкой помещений, то сейчас это уже полноценные здания с множеством декорированных комнат на разных этажах. Особенно круто стало передвигаться по городу используя сквозные помещения (чердаки и комнаты) в качестве кратчайших альтернативных маршрутов.
 							
 							p.post--image
-								img(src='http://level-design.ru/wp-content/uploads/2016/04/08.jpg')
+								img(src='http://level-design.ru/wp-content/uploads/2016/04/08-1200x600.jpg')
 							
 							p.post--text Движок научили легко отрисовывать многотысячные толпы, что позволило построить некоторые миссии вокруг больших социальных событий (публичные народные собрания, казни, балы). При этом каждый персонаж проигрывает разные анимации и носит отличающийся от других набор одежды. В итоге массовка выглядит очень впечатляюще, особенно с какой-нибудь высокой колокольни.
 							
 							p.post--image
-								img(src='http://level-design.ru/wp-content/uploads/2016/04/13.jpg')
+								img(src='http://level-design.ru/wp-content/uploads/2016/04/13-1200x600.jpg')
 							
 							p.post--text К сожалению, в игре отсутствуют какие-либо интерактивные транспортные средства. Все повозки и лодки либо статичны, либо используются только в кат-сценах. Зато игровой мир полон мелких животных — по подворотням бегают собаки, а на крышах можно встретить забавных котиков.
 							
@@ -71,58 +101,58 @@ html
 							p.post--text И без того отличная механика паркура стала еще удобнее. Все маршруты плавно перетекают один в другой и образуют многоэтажную систему путей. Из новинок — в некоторых местах можно мгновенно взлететь на крышу здания, отрубив веревку с грузом-противовесом. Упасть с высоты стало совсем сложно, т.к. персонаж всегда гарантированно останавливается в местах, где можно разбиться.
 							
 							p.post--image
-								img(src='http://level-design.ru/wp-content/uploads/2016/04/05.jpg')
+								img(src='http://level-design.ru/wp-content/uploads/2016/04/05-1200x600.jpg')
 							
 							p.post--text Без грамотно построенного пространства паркур навряд ли вызывал бы столько положительных эмоций. Понимая это, разработчики Assassin’s Creed: Unity используют несколько классических приемов, позволяющих создать окружение, в котором игроку будет комфортно передвигаться и очень легко ориентироваться. Рассмотрим несколько примеров.
 							p.post--text Повозка с хламом внутри и ящиком сверху образует ступеньки («трамплин»), по которым можно легко забежать на балкон второго этажа.
 							
 							p.post--image
-								img(src='http://level-design.ru/wp-content/uploads/2016/04/18.jpg')
+								img(src='http://level-design.ru/wp-content/uploads/2016/04/18-1200x600.jpg')
 							
 							p.post--text Для большей заметности «трамплины» маркируют белой тканью:
 							
 							p.post--image
-								img(src='http://level-design.ru/wp-content/uploads/2016/04/15.jpg')
+								img(src='http://level-design.ru/wp-content/uploads/2016/04/15-1200x600.jpg')
 							
 							p.post--text А здесь геометрия уровня формирует собой ступеньки, ведущие игрока к месту, с которого начинается скрытое проникновение в Бастилию:
 							
 							p.post--image
-								img(src='http://level-design.ru/wp-content/uploads/2016/04/17.jpg')
+								img(src='http://level-design.ru/wp-content/uploads/2016/04/17-1200x600.jpg')
 							
 							p.post--text При помощи деревянных досок прислоненных к стенам игроку намекают на места, откуда можно легко забраться наверх, не теряя при этом скорости:
 							
 							p.post--image
-								img(src='http://level-design.ru/wp-content/uploads/2016/04/19.jpg')
+								img(src='http://level-design.ru/wp-content/uploads/2016/04/19-1200x600.jpg')
 							
 							p.post--text Еще один хороший пример с подсказкой игроку о точке старта восхождения на вершину купола:
 							
 							p.post--image
-								img(src='http://level-design.ru/wp-content/uploads/2016/04/11.jpg')
+								img(src='http://level-design.ru/wp-content/uploads/2016/04/11-1200x600.jpg')
 							
 							p.post--text Чтобы не заставлять игрока сбавлять скорость, очень часто между двумя высокими крышами делают импровизированные деревянные мостики:
 							
 							p.post--image
-								img(src='http://level-design.ru/wp-content/uploads/2016/04/04.jpg')
+								img(src='http://level-design.ru/wp-content/uploads/2016/04/04-1200x600.jpg')
 							
 							p.post--text Тоже самое касается многочисленных канатов соединяющих здания, которые иногда ведут прямиком в интерьеры зданий (либо наоборот, выпрыгнув из окна можно забежать по канату на крышу).
 							
 							p.post--image
-								img(src='http://level-design.ru/wp-content/uploads/2016/04/16.jpg')
+								img(src='http://level-design.ru/wp-content/uploads/2016/04/16-1200x600.jpg')
 							
 							p.post--text Для быстрого перемещения по вертикали, а также с одного здания на другое, активно используются многочисленные балкончики, карнизы, вывески, держатели для фонарей, открытые ставни, флагштоки, козырьки:
 							
 							p.post--image
-								img(src='http://level-design.ru/wp-content/uploads/2016/04/10.jpg')
+								img(src='http://level-design.ru/wp-content/uploads/2016/04/10-1200x600.jpg')
 							
 							p.post--text При помощи стаек сидящих голубей игроку намекают на места для быстрого спуска вниз (прыжков в телегу с сеном):
 							
 							p.post--image
-								img(src='http://level-design.ru/wp-content/uploads/2016/04/14.jpg')
+								img(src='http://level-design.ru/wp-content/uploads/2016/04/14-1200x600.jpg')
 							
 							p.post--text Самые высокие точки зданий (открывающие быстрое перемещение между районами) очень легко заприметить по парящим над ними орлам. Под каждой точкой «синхронизации» обязательно стоит телега с сеном, позволяющая быстро спуститься вниз выполнив головокружительный прыжок.
 							
 							p.post--image
-								img(src='http://level-design.ru/wp-content/uploads/2016/04/03.jpg')
+								img(src='http://level-design.ru/wp-content/uploads/2016/04/03-1200x600.jpg')
 							
 							p.post--headline
 								span СТЕЛС
@@ -141,12 +171,12 @@ html
 							p.post--text Например, очень зрелищной была миссия, где игрок находясь под обстрелом преследовал воздушный шар с напарницей.
 
 							p.post--image
-								img(src='http://level-design.ru/wp-content/uploads/2016/04/07.jpg')
+								img(src='http://level-design.ru/wp-content/uploads/2016/04/07-1200x600.jpg')
 
 							p.post--text Миссии с ликвидацией протекают в окружении-песочнице, гарантирующей несколько способов выполнения поставленной задачи. Как правило, такие миссии всегда начинаются на возвышенности, с которой открывается отличный вид на локацию. В этот же момент внимание игрока при помощи кат-сцен фокусируют на дополнительных возможностях, позволяющих выполнить задание разными способами.
 
 							p.post--image
-								img(src='http://level-design.ru/wp-content/uploads/2016/04/12.jpg')
+								img(src='http://level-design.ru/wp-content/uploads/2016/04/12-1200x600.jpg')
 
 							p.post--text Например, в эпизоде, где нужно проникнуть в собор Нотр-Дам, можно: использовать камуфляж и затеряться в толпе, использовать отвлекающие механики (деньги в толпу, фейерверки, дымовую завесу), стащить ключи\взломать дверь и попасть внутрь через крышу, в наглую вломиться через парадный вход и перебить всех охранников. Помимо этого существуют и уникальные варианты убийства своей цели, к примеру в соборе Нотр-Дам можно прикинуться священником и подождать жертву в кабинке для исповеданий.
 							p.post--text Иногда ликвидация цели превращается в полноценную «битву с боссом», которая проходит в несколько этапов. Примеры — схватка с ассасином во Дворце Правосудия, или финальная битва с Жерменом в катакомбах.
@@ -164,13 +194,13 @@ html
 							p.post--text Игроку нужно провести расследование и решить ряд загадок, посетив храм, кладбище и мельницу. У старой мельницы мы находим вход в каменоломню, откуда позде попадаем в самое сердце катакомб. В каменоломнях игрока встречает куча паркурных пазлов и новая игровая механика с использованием лампы и поддержанием в ней огня (нельзя идти или карабкаться дальше, если лампой не отогнать насекомых и летучих мышей).
 
 							p.post--image
-								img(src='http://level-design.ru/wp-content/uploads/2016/04/02.jpg')
+								img(src='http://level-design.ru/wp-content/uploads/2016/04/02-1200x600.jpg')
 
 							p.post--text Там же приходится разбираться с группами мародеров. Во главе каждой группы стоит капитан (приоритетная цель), убив которого мы обращаем всю группу в бегство. Таким образом, игроку не обязательно скрытно вырезать всех врагов, достаточно сфокусироваться только на капитане.
 							p.post--text Понравился пазл с открыванием дверей — нужно при помощи лампы найти две плиты-кнопки. Первую кнопку мы находим разогнав свору крыс, а ко второй кнопке расположенной в укромном месте высоко над дверью нас выводят следы светящейся краски.
 
 							p.post--image
-								img(src='http://level-design.ru/wp-content/uploads/2016/04/01.jpg')
+								img(src='http://level-design.ru/wp-content/uploads/2016/04/01-1200x600.jpg')
 
 							p.post--text Самым впечатляющим моментом стал финал эпизода, когда мы находим древний артефакт раньше мародеров и при помощи него сметаем на своём пути толпы врагов.
 
@@ -224,9 +254,9 @@ html
 								a.author-profile--bottom(title='Written by Михаил Кадиков', arial-label='Written by Михаил Кадиков', href='http://level-design.ru/')
 									img(src="/assets/img/pic.jpeg" class="avatar-image--bottom" alt="Profile of Myzin Sergei")
 									span Михаил Кадиков
-								div.author-profile--follow
-									button.button-follow(title='Follow to get new posts from this author', arial-label='Follow to get new posts from this author')
-										span Follow
+								//- div.author-profile--follow
+								//- 	button.button-follow(title='Follow to get new posts from this author', arial-label='Follow to get new posts from this author')
+								//- 		span Follow
 
 		
 

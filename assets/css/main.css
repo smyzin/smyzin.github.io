@@ -1002,7 +1002,7 @@ input[type="button"]:focus {
 }
 
 .devider {
-  margin-top: -11px !important;
+  margin-top: 0px !important;
 }
 
 .picture {
@@ -1045,8 +1045,8 @@ input[type="button"]:focus {
   position: relative;
   min-width: 50%;
   max-width: 100%;
-  padding-left: 25px;
-  padding-right: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .header_text {
@@ -1126,14 +1126,15 @@ input[type="button"]:focus {
 
 .post--image img {
   position: inherit;
-  max-width: 800px;
-  max-height: 400px;
-  min-width: 500px;
-  min-height: 280px;
+  width: 100%;
+  min-width: 320px;
+  height: auto;
   text-indent: 0 !important;
 }
 
 .post--image {
+  width: 100%;
+  min-width: 320px;
   text-align: center;
 }
 
@@ -1228,6 +1229,7 @@ input[type="button"]:focus {
   border: none;
   width: 40px;
   height: 40px;
+  padding-right: 0px;
   padding-left: 0px;
   border-radius: 100%;
   fill: #555;
