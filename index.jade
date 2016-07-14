@@ -8,9 +8,13 @@ html
 		meta(name="author", content="Sergei Myzin")
 		title DM | @smyzin
 		link(rel='stylesheet', href='/assets/css/main.css')
+		script(src="//load.sumome.com/" data-sumo-site-id="c2f35903c1e8367e11bb07ca3c2cf0976503c66eda119e87a1c3b8ffd5512a03" async="async")
+		link(rel="stylesheet", href="https://cdn.rawgit.com/robinparisi/tingle/master/src/tingle.css")
 		link(href='http://fonts.googleapis.com/css?family=Lato', rel='stylesheet')
 		link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css")
 		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.3.0/font-mfizz.css")
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js')
 		script(type='text/javascript').
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -20,6 +24,7 @@ html
 			ga('send', 'pageview');
 
 	body.post
+		script(type='text/javascript', src='/assets/js/functions.js')
 		//- <!-- Yandex.Metrika counter -->
 		script(type="text/javascript").
 			(function (d, w, c) {
@@ -48,6 +53,7 @@ html
 			div
 				img(src="https://mc.yandex.ru/watch/38250160" style="position:absolute; left:-9999px;" alt="")
 		//- <!-- /Yandex.Metrika counter -->
+		
 		div.card-wraper
 			div.card
 				div.header_card
@@ -155,20 +161,110 @@ html
 								p.post-block--tags Sass, Jade
 								a.post-block--link(href='http://codepen.io/therealnorman/full/zBrmRo/', title='Peek details', arial-label='Peek details') Look it
 
-
-						//- div.option_block
-						//- 	p Text 1
-						//- div.option_container
-						//- 	p Text 2
-						
-
-
 				hr.post--point(data-symbol="∞")
 
+				.submit-box
+					.form(style='display: none;' id='form-sub')
+						form(id='form-submit' method='get' class='tingle-content-wrapper')
+						#form-submit-block
+							h3 Get in touch with me
+							i(class="fa fa-user fa-2x icons" aria-hidden="true")
+							input(type='text' id='name-field' name='name' placeholder='Name*' required maxlength='70')
+							i(class="fa fa-check-circle fa-2x check check-name" aria-hidden="true")
+							i(class="fa fa-envelope fa-2x icons" aria-hidden="true")
+							input(type='email' id='email-field' name='email' placeholder='Email*' required maxlength='110')
+							i(class="fa fa-check-circle fa-2x check check-email" aria-hidden="true")
+							i(class="fa fa-comment fa-2x icons" aria-hidden="true")
+							textarea(type="text" name='comment' placeholder='Comment' cols='50' row='1' style='resize: vertical;')
+							button(id='submit')
+								span Get in Touch
+				.submit-button
+					a.hire_me(href='#' title='Contact Me' id='hire') Contact me
+					div(id='px' style='display: none;') 
+
+
+		script(type='text/javascript').
+			var data = {};
+			var form = $('#form-submit-block');
+			data.name = form.find('[name="name"]').val();
+			data.email = form.find('[name="email"]').val();
+			data.message = form.find('[name="comment"]').val();
+
+			$('#name-field').on('input', function() {
+				var input=$(this);
+				var is_name=input.val();
+				if(is_name.length >= 3){
+					input.removeClass("invalid").addClass("valid");
+					$('.fa-user').css('color', '#a8dba8').removeClass('bounce');
+					$('.check-name').show();
+					console.log("Name checked");
+				}else{
+					input.removeClass("valid").addClass("invalid");
+					$('.fa-user').css('color', '#f15c5c').addClass('bounce');
+					$('.check-name').hide();
+					console.log("Name is invalid");
+					return false;
+				}
+			});
+			$('#email-field').on('input', function() {
+				var input=$(this);
+				var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+				var is_email=re.test(input.val());
+				if(is_email){
+					input.removeClass("invalid").addClass("valid");
+					$('.fa-envelope').css('color', '#a8dba8').removeClass('bounce');
+					$('.check-email').show();
+					console.log("Email checked");
+				}else{
+					input.removeClass("valid").addClass("invalid");
+					$('.fa-envelope').css('color', '#f15c5c').addClass('bounce');
+					$('.check-email').hide();
+					console.log("Email is invalid");
+					return false;
+				}
+			});
+			
+			$("#submit").click(function(event){
+				var form_data=$("#form-sub").serializeArray();
+				var error_free=true;
+				for (var input in form_data){
+					var element=$("#form-submit-block "+form_data[input]['name']);
+					var valid=element.hasClass("valid");
+					var error_element=$("span", element.parent());
+					if (!valid){error_element.removeClass("error").addClass("error_show"); error_free=false;}
+					else{error_element.removeClass("error_show").addClass("error");}
+				}
+				if (!error_free){
+					event.preventDefault(); 
+				}
+				else{
+					alert('No errors: Form will be submitted');
+				}
+			});
+			//- if($('#name-field').hasClass("valid") && $('#email-field').hasClass("valid")){
+			//- 	if(data.message != ''){
+			//- 		var pwm= '<img src="http://lpgenerator.ru/api/leads/add/pixel/?_key=1635500132bbf2c5&variant=1284055&notify=1&channel=pt&name='+data.name+'&email='+data.email+'&message='+data.message+'" width="1" height="1" />';
+			//- 		$("#px").append(pwm);
+			//- 	}else{
+			//- 		var pnm= '<img src="http://lpgenerator.ru/api/leads/add/pixel/?_key=1635500132bbf2c5&variant=1284055&notify=1&channel=pt&name='+data.name+'&email='+data.email+'" width="1" height="1" />';
+			//- 		$("#px").append(pnm);
+			//- 	}
+			//- 	alert('Thx!!!');
+			//- }else if($('#name-field').hasClass("invalid") || $('#email-field').hasClass("invalid")){
+			//- 	if($('#name-field').hasClass("invalid")){
+			//- 		$('#name-field').removeClass("valid").addClass("invalid");
+			//- 		$('.fa-user').css('color', '#f15c5c').addClass('bounce');
+			//- 		$('.check-name').hide();
+			//- 	}else if($('#email-field').hasClass("invalid")){
+			//- 		$('#email-field').removeClass("valid").addClass("invalid");
+			//- 		$('.fa-envelope').css('color', '#f15c5c').addClass('bounce');
+			//- 		$('.check-email').hide();
+			//- 	}
+			//- }
+
+
+		script(src='https://cdn.rawgit.com/robinparisi/tingle/master/src/tingle.js')
 		
-		script(src='https://code.jquery.com/jquery-1.12.3.min.js')
-		script(type='text/javascript', src='/assets/js/functions.js')
-		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+		//- script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
 		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js')
-		link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
 		script(src='/assets/js/jquery.cookie.js')
