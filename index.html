@@ -9,7 +9,6 @@
     <meta name="author" content="Sergei Myzin"/>
     <title>DM | @smyzin</title>
     <link rel="stylesheet" href="/assets/css/main.css"/>
-    <script src="//load.sumome.com/" data-sumo-site-id="c2f35903c1e8367e11bb07ca3c2cf0976503c66eda119e87a1c3b8ffd5512a03" async="async"></script>
     <link rel="stylesheet" href="https://cdn.rawgit.com/robinparisi/tingle/master/src/tingle.css"/>
     <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
@@ -153,100 +152,62 @@
         <hr data-symbol="∞" class="post--point"/>
         <div class="submit-box">
           <div style="display: none;" id="form-sub" class="form">
-            <form id="form-submit" method="get" class="tingle-content-wrapper"></form>
-            <div id="form-submit-block">
-              <h3>Get in touch with me</h3><i aria-hidden="true" class="fa fa-user fa-2x icons"></i>
-              <input type="text" id="name-field" name="name" placeholder="Name*" required="required" maxlength="70"/><i aria-hidden="true" class="fa fa-check-circle fa-2x check check-name"></i><i aria-hidden="true" class="fa fa-envelope fa-2x icons"></i>
-              <input type="email" id="email-field" name="email" placeholder="Email*" required="required" maxlength="110"/><i aria-hidden="true" class="fa fa-check-circle fa-2x check check-email"></i><i aria-hidden="true" class="fa fa-comment fa-2x icons"></i>
-              <textarea type="text" name="comment" placeholder="Comment" cols="50" row="1" style="resize: vertical;"></textarea>
-              <button id="submit"><span>Get in Touch</span></button>
-            </div>
+            <form id="form-submit" method="get" onsubmit="preventDefault()" class="tingle-content-wrapper">
+              <div id="form-submit-block">
+                <h3>Get in touch with me</h3><i aria-hidden="true" class="fa fa-user fa-2x icons"></i>
+                <input type="text" id="name-field" name="name" placeholder="Name*" required="required" maxlength="70" class="val"/><i aria-hidden="true" class="fa fa-check-circle fa-2x check check-name"></i><i aria-hidden="true" class="fa fa-envelope fa-2x icons"></i>
+                <input type="email" id="email-field" name="email" placeholder="Email*" required="required" maxlength="110" class="val"/><i aria-hidden="true" class="fa fa-check-circle fa-2x check check-email"></i><i aria-hidden="true" class="fa fa-comment fa-2x icons"></i>
+                <textarea type="text" name="comment" placeholder="Comment" cols="50" row="1" style="resize: vertical;"></textarea>
+                <button id="submit" onclick="sendMail()" onsubmit="return false"><span>Get in Touch</span></button>
+              </div>
+            </form>
+          </div>
+          <div style="display: none;" id="form-conf" class="confirmation">
+            <h3>Thank you for leaving message</h3><br/>
+            <p>I got your email, thanks for it. Your feedback and questions are valuable to me. I will answer you as soon as possible.</p>
           </div>
         </div>
         <div class="submit-button"><a href="#" title="Contact Me" id="hire" class="hire_me">Contact me</a>
-          <div id="px" style="display: none;"> </div>
+          <div id="px" style="display: none;"></div>
         </div>
       </div>
     </div>
     <script type="text/javascript">
-      var data = {};
-      var form = $('#form-submit-block');
-      data.name = form.find('[name="name"]').val();
-      data.email = form.find('[name="email"]').val();
-      data.message = form.find('[name="comment"]').val();
+      function sendMail() {
+      	var data = {};
+      	var form = $('#form-submit-block');
       
-      $('#name-field').on('input', function() {
-      	var input=$(this);
-      	var is_name=input.val();
-      	if(is_name.length >= 3){
-      		input.removeClass("invalid").addClass("valid");
-      		$('.fa-user').css('color', '#a8dba8').removeClass('bounce');
-      		$('.check-name').show();
-      		console.log("Name checked");
-      	}else{
-      		input.removeClass("valid").addClass("invalid");
-      		$('.fa-user').css('color', '#f15c5c').addClass('bounce');
-      		$('.check-name').hide();
-      		console.log("Name is invalid");
-      		return false;
-      	}
-      });
-      $('#email-field').on('input', function() {
-      	var input=$(this);
-      	var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-      	var is_email=re.test(input.val());
-      	if(is_email){
-      		input.removeClass("invalid").addClass("valid");
-      		$('.fa-envelope').css('color', '#a8dba8').removeClass('bounce');
-      		$('.check-email').show();
-      		console.log("Email checked");
-      	}else{
-      		input.removeClass("valid").addClass("invalid");
-      		$('.fa-envelope').css('color', '#f15c5c').addClass('bounce');
-      		$('.check-email').hide();
-      		console.log("Email is invalid");
-      		return false;
-      	}
-      });
+      	data.name = form.find('[name="name"]').val();
+      	data.email = form.find('[name="email"]').val();
+      	data.message = form.find('[name="comment"]').val();
+      	
+      	if($('#name-field').hasClass("valid") && $('#email-field').hasClass("valid")){
       
-      $("#submit").click(function(event){
-      	var form_data=$("#form-sub").serializeArray();
-      	var error_free=true;
-      	for (var input in form_data){
-      		var element=$("#form-submit-block "+form_data[input]['name']);
-      		var valid=element.hasClass("valid");
-      		var error_element=$("span", element.parent());
-      		if (!valid){error_element.removeClass("error").addClass("error_show"); error_free=false;}
-      		else{error_element.removeClass("error_show").addClass("error");}
-      	}
-      	if (!error_free){
-      		event.preventDefault(); 
-      	}
-      	else{
-      		alert('No errors: Form will be submitted');
-      	}
-      });
-      //- if($('#name-field').hasClass("valid") && $('#email-field').hasClass("valid")){
-      //- 	if(data.message != ''){
-      //- 		var pwm= '<img src="http://lpgenerator.ru/api/leads/add/pixel/?_key=1635500132bbf2c5&variant=1284055&notify=1&channel=pt&name='+data.name+'&email='+data.email+'&message='+data.message+'" width="1" height="1" />';
-      //- 		$("#px").append(pwm);
-      //- 	}else{
-      //- 		var pnm= '<img src="http://lpgenerator.ru/api/leads/add/pixel/?_key=1635500132bbf2c5&variant=1284055&notify=1&channel=pt&name='+data.name+'&email='+data.email+'" width="1" height="1" />';
-      //- 		$("#px").append(pnm);
-      //- 	}
-      //- 	alert('Thx!!!');
-      //- }else if($('#name-field').hasClass("invalid") || $('#email-field').hasClass("invalid")){
-      //- 	if($('#name-field').hasClass("invalid")){
-      //- 		$('#name-field').removeClass("valid").addClass("invalid");
-      //- 		$('.fa-user').css('color', '#f15c5c').addClass('bounce');
-      //- 		$('.check-name').hide();
-      //- 	}else if($('#email-field').hasClass("invalid")){
-      //- 		$('#email-field').removeClass("valid").addClass("invalid");
-      //- 		$('.fa-envelope').css('color', '#f15c5c').addClass('bounce');
-      //- 		$('.check-email').hide();
-      //- 	}
-      //- }
+      		if(data.message != ''){
+      			var pwm= '<img src="http://lpgenerator.ru/api/leads/add/pixel/?api_key=1635500132bbf2c5&variant=1284055&notify=1&channel=pt&name='+data.name+'&email='+data.email+'&message='+data.message+'" width="1" height="1" />';
+      			$("#px").append(pwm);
+      		}else{
+      			var pnm= '<img src="http://lpgenerator.ru/api/leads/add/pixel/?api_key=1635500132bbf2c5&variant=1284055&notify=1&channel=pt&name='+data.name+'&email='+data.email+'" width="1" height="1" />';
+      			$("#px").append(pnm);
+      		}
+      		console.log('Done');
       
+      		$('#form-sub').fadeOut('700');
+      		$('#form-conf').fadeIn('1500');
+      	}else if($('#name-field').hasClass("val") || $('#email-field').hasClass("val")){
+      		if(data.name == ''){$('#name-field').addClass('invalid');}
+      		if(data.email == ''){$('#email-field').addClass('invalid');}
+      		if($('#name-field').hasClass("invalid")){
+      			$('#name-field').removeClass("valid").addClass("invalid");
+      			$('.fa-user').css('color', '#f15c5c').addClass('bounce');
+      			$('.check-name').hide();
+      		}else if($('#email-field').hasClass("invalid")){
+      			$('#email-field').removeClass("valid").addClass("invalid");
+      			$('.fa-envelope').css('color', '#f15c5c').addClass('bounce');
+      			$('.check-email').hide();
+      		}
+      	}
+      };
       
     </script>
     <script src="https://cdn.rawgit.com/robinparisi/tingle/master/src/tingle.js"></script>
