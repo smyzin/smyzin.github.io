@@ -53,65 +53,108 @@ html
 				img(src="https://mc.yandex.ru/watch/38250160" style="position:absolute; left:-9999px;" alt="")
 		//- <!-- /Yandex.Metrika counter -->
 		
-		div.card-wraper
-			div.card
-				div.header_card
+		.card-wraper
+			.card
+				.header_card
 					img(src='/assets/img/logo.gif').logo
 					h1.title DevMonkeys
-				div.menu.menu--top
-					div.menu-cover
+				.menu.menu--top
+					.menu-cover
 						img(src='/assets/img/logo.gif').logo-menu
 						h1.title-menu DevMonkeys
 				hr.devider
-				div.main_container
-					div.user_container
-						div.author-profile--page
+				.main_container
+					.user_container
+						.author-profile--page
 							img(src="/assets/img/pic.jpeg" class="author-profile--avatar" alt="Profile of Myzin Sergei")
 							h1.author-name
 								a(href='/@Myzin', title="Profile of Myzin Sergei", aria-label="Profile of Myzin Sergei").author-name--link Myzin Sergei
 							p.author-description I am a self-taught developer and already I can't get enough of coding. My favorite tools are Sass, Jade, jQuery if we consider front-end development. In Back-end I use Python and learn Ruby (of course with relevant frameworks) because I am fully convinced that this tools are the most powerful than others.
 							p.author-description Also I have some experience in Illustration and PhotoShop and once in a blue moon I draw some for myself.
+							p.author-description.skills-header Main knowledge in:
 						
-						div.skills-preview
+						.skills-preview 
 							ul.skills-preview__list
 								li
-									i.fa.fa-html5
-									span.item HTML
-									div.item-progress
-										div.progress(data-progress='html')
-									span.persent-prog 100%
+									.item-desc
+										i.fa.fa-html5
+										span.item HTML
+									.item-progress
+										.stars(data-progress='html')
+											//- .progress(data-progress='html')
+											span.persent-prog
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
 								li
-									i.fa.fa-css3
-									span.item CSS
-									div.item-progress
-										div.progress(data-progress='css')
-									span.persent-prog 100%
+									.item-desc
+										i.fa.fa-css3
+										span.item CSS
+									.item-progress
+										.stars(data-progress='css')
+											//- .progress(data-progress='css')
+											span.persent-prog
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
 								li
-									i.icon-python
-									span.item Python
-									div.item-progress
-										div.progress(data-progress='python')
-									span.persent-prog 45%
+									.item-desc
+										i.icon-python
+										span.item Python
+									.item-progress
+										.stars(data-progress='python')
+											//- .progress(data-progress='python')
+											span.persent-prog
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star-o
 								li
-									i.icon-javascript
-									span.item JS
-									div.item-progress
-										div.progress(data-progress='js')
-									span.persent-prog 35%
+									.item-desc
+										i.icon-javascript
+										span.item JS
+									.item-progress
+										.stars(data-progress='js')
+											//- .progress(data-progress='js')
+											span.persent-prog
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star-o
+												i.fa.fa-star-o
 								li
-									i.icon-ruby
-									span.item Ruby
-									div.item-progress
-										div.progress(data-progress='ruby')
-									span.persent-prog 10%
+									.item-desc
+										i.icon-blackberry
+										span.item jQuery
+									.item-progress
+										.stars(data-progress='jq')
+											//- .progress(data-progress='ror')
+											span.persent-prog
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star
+												i.fa.fa-star-o
+												i.fa.fa-star-o
 								li
-									i.icon-ruby-on-rails
-									span.item ROR
-									div.item-progress
-										div.progress(data-progress='ror')
-									span.persent-prog 5%
+									.item-desc
+										i.icon-ruby
+										span.item Ruby
+									.item-progress
+										.stars(data-progress='ruby')
+											//- .progress(data-progress='ruby')
+											span.persent-prog
+												i.fa.fa-star
+												i.fa.fa-star-o
+												i.fa.fa-star-o
+												i.fa.fa-star-o
+												i.fa.fa-star-o
 
-						div.author-profile--information(id='buttons-nav')
+						.author-profile--information(id='buttons-nav')
 							button.button-skills.--active(title='All', arial-label='All', data-tag='all')
 								span All
 							button.button-skills(title='Landing Page', arial-label='Landing Page', data-tag='lp')
@@ -123,37 +166,36 @@ html
 							button.button-skills(title='Ruby', arial-label='Ruby', data-tag='ruby', style="display: none;")
 								span Ruby
 						hr.devider(style='margin-top: 20px !important;')
-						div.skill-container(data-view-tag="all")
-							//- div.round
-							div.preloader
-							div.spinners
-								div.row
-									div.spinner.spinner-bounce-bottom
-							div.post-block(data-view="codepen")
+						.skill-container(data-view-tag="all")
+							.preloader
+							.spinners
+								.row
+									.spinner.spinner-bounce-bottom
+							.post-block(data-view="codepen")
 								p.post-block--header Futurama
 								img.post-block--img(src='/assets/img/futurama-post.png')
 								p.post-block--description Futurama Tribute Page tell us about the main characters of this serial
 								p.post-block--tags Sass, Jade
 								a.post-block--link(href='http://github.devmonkeys.xyz/freecodecamp-solutions/basic_front_end_development_projects/tribute_page/', title='Peek details', arial-label='Peek details') Look it
-							div.post-block(data-view="lp")
+							.post-block(data-view="lp")
 								p.post-block--header Assassin’s Creed: Unity
 								img.post-block--img(src='https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg')
 								p.post-block--description Проводим глубокий анализ игры Assassin’s Creed: Unity
 								p.post-block--tags CSS3, Jade, JS
 								a.post-block--link(href='http://github.devmonkeys.xyz/posts/assassins-creed-unity', title='Peek details', arial-label='Peek details') Look it
-							div.post-block(data-view="codepen")
+							.post-block(data-view="codepen")
 								p.post-block--header Illustration
 								img.post-block--img(src='/assets/img/earth_illustration-post.png')
 								p.post-block--description Animated Earth Illustration only with CSS and HTML (without any JS)
 								p.post-block--tags Sass, Jade
 								a.post-block--link(href='http://codepen.io/therealnorman/full/YWqJXZ/', title='Peek details', arial-label='Peek details') Look it
-							div.post-block(data-view="codepen")
+							.post-block(data-view="codepen")
 								p.post-block--header Twitter widget
 								img.post-block--img(src='/assets/img/twitter-post.png')
 								p.post-block--description Redesign a small twitter widget based on Dribbble Illustration
 								p.post-block--tags Sass, Jade
 								a.post-block--link(href='http://codepen.io/therealnorman/full/YWwWdP/', title='Peek details', arial-label='Peek details') Look it
-							div.post-block(data-view="codepen")
+							.post-block(data-view="codepen")
 								p.post-block--header Registration card
 								img.post-block--img(src='/assets/img/egistration_card-post.png')
 								p.post-block--description Code registration card based on Dribbble Illustration
@@ -164,7 +206,7 @@ html
 
 				.submit-box
 					.form(style='display: none;' id='form-sub')
-						form(id='form-submit' method='get' class='tingle-content-wrapper' onsubmit='preventDefault()')
+						form(id='form-submit' class='tingle-content-wrapper' onsubmit='sendMail();return false')
 							#form-submit-block
 								h3 Get in touch with me
 								i(class="fa fa-user fa-2x icons" aria-hidden="true")
@@ -175,7 +217,7 @@ html
 								i(class="fa fa-check-circle fa-2x check check-email" aria-hidden="true")
 								i(class="fa fa-comment fa-2x icons" aria-hidden="true")
 								textarea(type="text" name='comment' placeholder='Comment' cols='50' row='1' style='resize: vertical;')
-								button(id='submit' onclick='sendMail()' onsubmit='return false')
+								button(id='submit')
 									span Get in Touch
 					.confirmation(style='display: none;' id='form-conf')
 							h3 Thank you for leaving message
@@ -188,6 +230,58 @@ html
 
 
 		script(type='text/javascript').
+			var isModal;
+			function modalCheck(winPopup){
+				if(isModal){
+					console.log('Close');
+					isModal.close();
+					isModal = '';
+
+				}else{
+					var modal = new tingle.modal();
+					isModal = modal;
+					modal.setContent(document.querySelector(winPopup).innerHTML);
+					modal.open();
+				}
+			}
+			$('#hire').on('click', function(e){
+				e.preventDefault();
+				modalCheck('#form-sub');
+
+				$('#name-field').on('input', function() {
+					var input=$(this);
+					var is_name=input.val();
+					if(is_name.length >= 3){
+						input.removeClass("invalid").addClass("valid");
+						$('.fa-user').css('color', '#a8dba8').removeClass('bounce');
+						$('.check-name').show();
+						console.log("Name checked");
+					}else{
+						input.removeClass("valid").addClass("invalid");
+						$('.fa-user').css('color', '#f15c5c').addClass('bounce');
+						$('.check-name').hide();
+						console.log("Name is invalid");
+					}
+				});
+
+				$('#email-field').on('input', function() {
+					var input=$(this);
+					var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+					var is_email=re.test(input.val());
+					if(is_email){
+						input.removeClass("invalid").addClass("valid");
+						$('.fa-envelope').css('color', '#a8dba8').removeClass('bounce');
+						$('.check-email').show();
+						console.log("Email checked");
+					}else{
+						input.removeClass("valid").addClass("invalid");
+						$('.fa-envelope').css('color', '#f15c5c').addClass('bounce');
+						$('.check-email').hide();
+						console.log("Email is invalid");
+					}
+				});
+			});	
+
 			function sendMail() {
 				var data = {};
 				var form = $('#form-submit-block');
@@ -207,8 +301,9 @@ html
 					}
 					console.log('Done');
 
-					$('#form-sub').fadeOut('700');
-					$('#form-conf').fadeIn('1500');
+					modalCheck('#form-sub');
+					modalCheck('#form-conf');
+
 				}else if($('#name-field').hasClass("val") || $('#email-field').hasClass("val")){
 					if(data.name == ''){$('#name-field').addClass('invalid');}
 					if(data.email == ''){$('#email-field').addClass('invalid');}
@@ -222,7 +317,9 @@ html
 						$('.check-email').hide();
 					}
 				}
-			};
+			}
+
+			$('#submit').submit(sendMail());
 
 		script(src='https://cdn.rawgit.com/robinparisi/tingle/master/src/tingle.js')
 		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js')

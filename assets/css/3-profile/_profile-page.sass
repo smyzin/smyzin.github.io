@@ -65,68 +65,78 @@
 // -----------------
 
 .skills-preview
-  width: 100%
-  min-width: 320px
-  padding: 0 10px
+  width: 50%
+  min-width: 300px
+  margin: 0 auto
+  padding: 0
 
 .skills-preview__list
   list-style: none
-  text-align: left
+  // text-align: center
   padding-left: 0
   & li
     display: block
     position: relative
-    margin-bottom: 7px
+    margin-bottom: 10px
+    height: 20px
+    clear: both
     & i
       display: inline-block
+      float: left
       padding: 0 5px
     & span
       display: inline-block
       font-weight: 300
+      float: left
       font-size: 1.1rem 
     & .item-progress
       display: inline-block
-      border: 1px solid black
-      border-radius: 1.2rem
-      width: calc(100% - 170px)
-      margin-right: 7px
-      min-width: 300px
+      min-width: 155px
       height: 20px
-      vertical-align: middle
+      float: right
+      padding-right: 10px
       & .progress
         position: inherit
         height: inherit
-        border-top-left-radius: inherit
-        border-bottom-left-radius: inherit
-        background: repeating-linear-gradient(-50deg, #30A6C7, #30A6C7 10px, #47b8e0 10px, #47b8e0 20px)
-        &[data-progress='html']
-          width: 100%
-          border-top-right-radius: inherit
-          border-bottom-right-radius: inherit
-        &[data-progress='css']
-          width: 100%
-          border-top-right-radius: inherit
-          border-bottom-right-radius: inherit
-        &[data-progress='js']
-          width: 35%
-        &[data-progress='python']
-          width: 45%
-        &[data-progress='ruby']
-          width: 10%
-        &[data-progress='ror']
-          width: 5%
+        // &[data-progress='html']
+        //   width: 100%
+        //   border-top-right-radius: inherit
+        //   border-bottom-right-radius: inherit
+        // &[data-progress='css']
+        //   width: 100%
+        //   border-top-right-radius: inherit
+        //   border-bottom-right-radius: inherit
+        // &[data-progress='js']
+        //   width: 35%
+        // &[data-progress='python']
+        //   width: 45%
+        // &[data-progress='ruby']
+        //   width: 10%
+        // &[data-progress='ror']
+        //   width: 5%
 
-.item
-  display: block
-  margin-right: 5px
-  width: 51px
+// .item
+//   display: block
+//   margin-right: 5px
+//   width: 51px
 
 .persent-prog
-  position: absolute
-  top: 5%
+  position: inherit
   z-index: 21
   font-weight: 400 !important
-  left: 8rem
+  & i
+    color: #FDD692
+
+.skills-header
+  width: 100%
+  margin: 0 0 7px 0 !important
+  font-size: 22px
+  font-weight: 400
+
+.item-desc
+  padding-left: 25px
+  text-align: left
+  
 
 // -----------------
 
@@ -160,7 +170,7 @@
   width: 300px
   height: 350px
   border-radius: 2%
-  margin: 6px 0px 6px 8px
+  margin: 6px 12px 6px -5px
   border: 1px solid #FAFAFA
   background-color: #FAFAFA
   transition: all .2s ease;

@@ -71,38 +71,51 @@
               <h1 class="author-name"><a href="/@Myzin" title="Profile of Myzin Sergei" aria-label="Profile of Myzin Sergei" class="author-name--link">Myzin Sergei</a></h1>
               <p class="author-description">I am a self-taught developer and already I can't get enough of coding. My favorite tools are Sass, Jade, jQuery if we consider front-end development. In Back-end I use Python and learn Ruby (of course with relevant frameworks) because I am fully convinced that this tools are the most powerful than others.</p>
               <p class="author-description">Also I have some experience in Illustration and PhotoShop and once in a blue moon I draw some for myself.</p>
+              <p class="author-description skills-header">Main knowledge in:</p>
             </div>
-            <div class="skills-preview">
+            <div class="skills-preview"> 
               <ul class="skills-preview__list">
-                <li><i class="fa fa-html5"></i><span class="item">HTML</span>
+                <li>
+                  <div class="item-desc"><i class="fa fa-html5"></i><span class="item">HTML</span></div>
                   <div class="item-progress">
-                    <div data-progress="html" class="progress"></div>
-                  </div><span class="persent-prog">100%</span>
+                    <div data-progress="html" class="stars"><span class="persent-prog"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </div>
+                  </div>
                 </li>
-                <li><i class="fa fa-css3"></i><span class="item">CSS</span>
+                <li>
+                  <div class="item-desc"><i class="fa fa-css3"></i><span class="item">CSS</span></div>
                   <div class="item-progress">
-                    <div data-progress="css" class="progress"></div>
-                  </div><span class="persent-prog">100%</span>
+                    <div data-progress="css" class="stars"><span class="persent-prog"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                    </div>
+                  </div>
                 </li>
-                <li><i class="icon-python"></i><span class="item">Python</span>
+                <li>
+                  <div class="item-desc"><i class="icon-python"></i><span class="item">Python</span></div>
                   <div class="item-progress">
-                    <div data-progress="python" class="progress"></div>
-                  </div><span class="persent-prog">45%</span>
+                    <div data-progress="python" class="stars"><span class="persent-prog"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></span>
+                    </div>
+                  </div>
                 </li>
-                <li><i class="icon-javascript"></i><span class="item">JS</span>
+                <li>
+                  <div class="item-desc"><i class="icon-javascript"></i><span class="item">JS</span></div>
                   <div class="item-progress">
-                    <div data-progress="js" class="progress"></div>
-                  </div><span class="persent-prog">35%</span>
+                    <div data-progress="js" class="stars"><span class="persent-prog"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+                    </div>
+                  </div>
                 </li>
-                <li><i class="icon-ruby"></i><span class="item">Ruby</span>
+                <li>
+                  <div class="item-desc"><i class="icon-blackberry"></i><span class="item">jQuery</span></div>
                   <div class="item-progress">
-                    <div data-progress="ruby" class="progress"></div>
-                  </div><span class="persent-prog">10%</span>
+                    <div data-progress="jq" class="stars"><span class="persent-prog"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+                    </div>
+                  </div>
                 </li>
-                <li><i class="icon-ruby-on-rails"></i><span class="item">ROR</span>
+                <li>
+                  <div class="item-desc"><i class="icon-ruby"></i><span class="item">Ruby</span></div>
                   <div class="item-progress">
-                    <div data-progress="ror" class="progress"></div>
-                  </div><span class="persent-prog">5%</span>
+                    <div data-progress="ruby" class="stars"><span class="persent-prog"><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+                    </div>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -152,13 +165,13 @@
         <hr data-symbol="∞" class="post--point"/>
         <div class="submit-box">
           <div style="display: none;" id="form-sub" class="form">
-            <form id="form-submit" method="get" onsubmit="preventDefault()" class="tingle-content-wrapper">
+            <form id="form-submit" onsubmit="sendMail();return false" class="tingle-content-wrapper">
               <div id="form-submit-block">
                 <h3>Get in touch with me</h3><i aria-hidden="true" class="fa fa-user fa-2x icons"></i>
                 <input type="text" id="name-field" name="name" placeholder="Name*" required="required" maxlength="70" class="val"/><i aria-hidden="true" class="fa fa-check-circle fa-2x check check-name"></i><i aria-hidden="true" class="fa fa-envelope fa-2x icons"></i>
                 <input type="email" id="email-field" name="email" placeholder="Email*" required="required" maxlength="110" class="val"/><i aria-hidden="true" class="fa fa-check-circle fa-2x check check-email"></i><i aria-hidden="true" class="fa fa-comment fa-2x icons"></i>
                 <textarea type="text" name="comment" placeholder="Comment" cols="50" row="1" style="resize: vertical;"></textarea>
-                <button id="submit" onclick="sendMail()" onsubmit="return false"><span>Get in Touch</span></button>
+                <button id="submit"><span>Get in Touch</span></button>
               </div>
             </form>
           </div>
@@ -173,6 +186,58 @@
       </div>
     </div>
     <script type="text/javascript">
+      var isModal;
+      function modalCheck(winPopup){
+      	if(isModal){
+      		console.log('Close');
+      		isModal.close();
+      		isModal = '';
+      
+      	}else{
+      		var modal = new tingle.modal();
+      		isModal = modal;
+      		modal.setContent(document.querySelector(winPopup).innerHTML);
+      		modal.open();
+      	}
+      }
+      $('#hire').on('click', function(e){
+      	e.preventDefault();
+      	modalCheck('#form-sub');
+      
+      	$('#name-field').on('input', function() {
+      		var input=$(this);
+      		var is_name=input.val();
+      		if(is_name.length >= 3){
+      			input.removeClass("invalid").addClass("valid");
+      			$('.fa-user').css('color', '#a8dba8').removeClass('bounce');
+      			$('.check-name').show();
+      			console.log("Name checked");
+      		}else{
+      			input.removeClass("valid").addClass("invalid");
+      			$('.fa-user').css('color', '#f15c5c').addClass('bounce');
+      			$('.check-name').hide();
+      			console.log("Name is invalid");
+      		}
+      	});
+      
+      	$('#email-field').on('input', function() {
+      		var input=$(this);
+      		var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      		var is_email=re.test(input.val());
+      		if(is_email){
+      			input.removeClass("invalid").addClass("valid");
+      			$('.fa-envelope').css('color', '#a8dba8').removeClass('bounce');
+      			$('.check-email').show();
+      			console.log("Email checked");
+      		}else{
+      			input.removeClass("valid").addClass("invalid");
+      			$('.fa-envelope').css('color', '#f15c5c').addClass('bounce');
+      			$('.check-email').hide();
+      			console.log("Email is invalid");
+      		}
+      	});
+      });	
+      
       function sendMail() {
       	var data = {};
       	var form = $('#form-submit-block');
@@ -192,8 +257,9 @@
       		}
       		console.log('Done');
       
-      		$('#form-sub').fadeOut('700');
-      		$('#form-conf').fadeIn('1500');
+      		modalCheck('#form-sub');
+      		modalCheck('#form-conf');
+      
       	}else if($('#name-field').hasClass("val") || $('#email-field').hasClass("val")){
       		if(data.name == ''){$('#name-field').addClass('invalid');}
       		if(data.email == ''){$('#email-field').addClass('invalid');}
@@ -207,7 +273,9 @@
       			$('.check-email').hide();
       		}
       	}
-      };
+      }
+      
+      $('#submit').submit(sendMail());
       
     </script>
     <script src="https://cdn.rawgit.com/robinparisi/tingle/master/src/tingle.js"></script>
