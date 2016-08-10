@@ -25,16 +25,6 @@ html
 
 	body.post
 		script(type='text/javascript', src='/assets/js/functions.js')
-		script(type="text/javascript").
-			dataLayer = dataLayer || [];
-			
-			dataLayer.push ({
-				"ecommerce": {
-					"visit_ip" : {
-						"ip" : ip,
-					}
-				}
-			});
 
 		//- <!-- Yandex.Metrika counter -->
 		script(type="text/javascript").
@@ -66,6 +56,16 @@ html
 		
 		//- <!-- /Yandex.Metrika counter -->
 		
+		script(type="text/javascript").
+			dataLayer = dataLayer || [];
+			
+			dataLayer.push ({
+				"ecommerce": {
+					"visit_ip" : {
+						"ip" : ip,
+					}
+				}
+			});
 
 		.card-wraper
 			.card
