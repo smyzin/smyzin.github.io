@@ -13,6 +13,7 @@
     <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.3.0/font-mfizz.css"/>
+    <script src="https://l2.io/ip.js?var=ip" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script type="text/javascript">
@@ -27,6 +28,7 @@
   </head>
   <body class="post">
     <script type="text/javascript" src="/assets/js/functions.js"></script>
+    <script type="text/javascript">var yaParams = ip;</script>
     <script type="text/javascript">
       (function (d, w, c) {
       	(w[c] = w[c] || []).push(function() {
@@ -35,8 +37,10 @@
       				id:38250160,
       				clickmap:true,
       				trackLinks:true,
+      				params:yaParams,
       				accurateTrackBounce:true,
-      				webvisor:true
+      				webvisor:true,
+      				params:yaParams||{ }
       			});
       		} catch(e) { }
       	});
