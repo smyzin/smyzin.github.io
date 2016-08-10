@@ -254,7 +254,11 @@ html
 					isModal = '';
 
 				}else{
-					var modal = new tingle.modal();
+					var modal = new tingle.modal({
+						onClose: function() {
+							modal.close();
+						}
+					});
 					isModal = modal;
 					modal.setContent(document.querySelector(winPopup).innerHTML);
 					modal.open();
