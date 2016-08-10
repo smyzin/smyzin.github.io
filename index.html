@@ -29,6 +29,16 @@
   <body class="post">
     <script type="text/javascript" src="/assets/js/functions.js"></script>
     <script type="text/javascript">
+      window.dataLayer.push ({
+      	"ecommerce": {
+      		"visit_ip" : {
+      			"ip" : ip,
+      		}
+      	}
+      });
+      
+    </script>
+    <script type="text/javascript">
       (function (d, w, c) {
       	(w[c] = w[c] || []).push(function() {
       		try {
@@ -54,16 +64,6 @@
       		d.addEventListener("DOMContentLoaded", f, false);
       	} else { f(); }
       })(document, window, "yandex_metrika_callbacks");
-      
-    </script>
-    <script type="text/javascript">
-      window.dataLayer.push ({
-      	"ecommerce": {
-      		"visit_ip" : {
-      			"ip" : ip,
-      		}
-      	}
-      });
       
     </script>
     <div class="card-wraper">
