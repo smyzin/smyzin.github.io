@@ -247,26 +247,48 @@ html
 
 		script(type='text/javascript').
 			var isModal;
-			function modalCheck(winPopup){
-				if(isModal){
-					console.log('Close');
-					isModal.close();
-					isModal = '';
+			function modalCheck(winPopup, modalWin){
+				if(modalWin != ''){
+					if(isModal){
+						console.log('Close');
+						isModal.close();
+						isModal = '';
 
+					}else{
+						var modal = new tingle.modal({
+							onClose: function() {
+								console.log("Close modal");
+							}
+						});
+						isModal = modal;
+						modal.setContent(document.querySelector(winPopup).innerHTML);
+						modal.open();
+					}
 				}else{
-					var modal = new tingle.modal({
-						onClose: function() {
-							console.log("Close modal");
-						}
-					});
+					var modal = new tingle.modal();
 					isModal = modal;
 					modal.setContent(document.querySelector(winPopup).innerHTML);
 					modal.open();
 				}
+				//- if(isModal){
+				//- 	console.log('Close');
+				//- 	isModal.close();
+				//- 	isModal = '';
+
+				//- }else{
+				//- 	var modal = new tingle.modal({
+				//- 		onClose: function() {
+				//- 			console.log("Close modal");
+				//- 		}
+				//- 	});
+				//- 	isModal = modal;
+				//- 	modal.setContent(document.querySelector(winPopup).innerHTML);
+				//- 	modal.open();
+				}
 			}
 			$('#hire').on('click', function(e){
 				e.preventDefault();
-				modalCheck('#form-sub');
+				modalCheck('#form-sub', '');
 
 				$('#name-field').on('input', function() {
 					var input=$(this);
