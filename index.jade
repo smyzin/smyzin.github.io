@@ -255,11 +255,7 @@ html
 						isModal = '';
 
 					}else{
-						var modal = new tingle.modal({
-							onClose: function() {
-								console.log("Close modal");
-							}
-						});
+						var modal = new tingle.modal();
 						isModal = modal;
 						modal.setContent(document.querySelector(winPopup).innerHTML);
 						modal.open();
@@ -284,7 +280,7 @@ html
 				//- 	isModal = modal;
 				//- 	modal.setContent(document.querySelector(winPopup).innerHTML);
 				//- 	modal.open();
-				}
+				//- }
 			}
 			$('#hire').on('click', function(e){
 				e.preventDefault();
