@@ -29,7 +29,9 @@
   <body class="post">
     <script type="text/javascript" src="/assets/js/functions.js"></script>
     <script type="text/javascript">
-      window.dataLayer.push ({
+      dataLayer = dataLayer || [];
+      
+      dataLayer.push ({
       	"ecommerce": {
       		"visit_ip" : {
       			"ip" : ip,
