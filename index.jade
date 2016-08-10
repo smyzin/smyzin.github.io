@@ -25,8 +25,6 @@ html
 
 	body.post
 		script(type='text/javascript', src='/assets/js/functions.js')
-		script(type="text/javascript").
-			var yaParams = ip;
 		//- <!-- Yandex.Metrika counter -->
 		script(type="text/javascript").
 			(function (d, w, c) {
@@ -36,28 +34,36 @@ html
 							id:38250160,
 							clickmap:true,
 							trackLinks:true,
-							params:window.yaParams,
 							accurateTrackBounce:true,
 							webvisor:true,
-							params:window.yaParams||{ }
+							ecommerce:"dataLayer"
 						});
 					} catch(e) { }
 				});
+
 				var n = d.getElementsByTagName("script")[0],
 					s = d.createElement("script"),
 					f = function () { n.parentNode.insertBefore(s, n); };
 				s.type = "text/javascript";
 				s.async = true;
 				s.src = "https://mc.yandex.ru/metrika/watch.js";
+
 				if (w.opera == "[object Opera]") {
 					d.addEventListener("DOMContentLoaded", f, false);
 				} else { f(); }
 			})(document, window, "yandex_metrika_callbacks");
-		noscript
-			div
-				img(src="https://mc.yandex.ru/watch/38250160" style="position:absolute; left:-9999px;" alt="")
+		
 		//- <!-- /Yandex.Metrika counter -->
 		
+		script(type="text/javascript").
+			window.dataLayer.push ({
+				"ecommerce": {
+					"visit_ip" : {
+						"ip" : ip,
+					}
+				}
+			});
+
 		.card-wraper
 			.card
 				.header_card
