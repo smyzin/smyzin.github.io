@@ -1391,7 +1391,7 @@ input[type="button"]:focus {
 }
 
 .submit-button {
-  padding: 50px 0;
+  padding: 50px 0 10px 0;
   width: auto;
   text-align: center;
   font-size: 'Lato', Helvetica, sans-serif;
