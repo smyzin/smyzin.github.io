@@ -97,15 +97,15 @@ $( document ).ready(function() {
 			}
 		});
 	});
-	
+
 	$(function(){
 		function tab (s) {
 			switch(s) {
 				case 'all':
 					$('.post-block').show();
 					break;
-				case 'lp':
-					$(".post-block").filter("[data-view='lp']").show();
+				case 'layout':
+					$(".post-block").filter("[data-view='layout']").show();
 					break;
 				case 'codepen':
 					$(".post-block").filter("[data-view='codepen']").show();
@@ -143,7 +143,7 @@ $( document ).ready(function() {
 
 	// $('#hire').on('click', function(e){
 	// 	e.preventDefault();
-		
+
 	// 	var modal = new tingle.modal();
 	// 	modal.setContent(document.querySelector('#form-sub').innerHTML);
 	// 	modal.open();
@@ -180,10 +180,10 @@ $( document ).ready(function() {
 	// 			console.log("Email is invalid");
 	// 		}
 	// 	});
-	// });	
-	
+	// });
 
-	
+
+
 
 
 

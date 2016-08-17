@@ -13,6 +13,7 @@
     <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.3.0/font-mfizz.css"/>
+    <script src="https://l2.io/ip.js?var=ip" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script type="text/javascript">
@@ -36,24 +37,39 @@
       				clickmap:true,
       				trackLinks:true,
       				accurateTrackBounce:true,
-      				webvisor:true
+      				webvisor:true,
+      				ecommerce:"dataLayer"
       			});
       		} catch(e) { }
       	});
+      
       	var n = d.getElementsByTagName("script")[0],
       		s = d.createElement("script"),
       		f = function () { n.parentNode.insertBefore(s, n); };
       	s.type = "text/javascript";
       	s.async = true;
       	s.src = "https://mc.yandex.ru/metrika/watch.js";
+      
       	if (w.opera == "[object Opera]") {
       		d.addEventListener("DOMContentLoaded", f, false);
       	} else { f(); }
       })(document, window, "yandex_metrika_callbacks");
+      
     </script>
-    <noscript>
-      <div><img src="https://mc.yandex.ru/watch/38250160" style="position:absolute; left:-9999px;" alt=""/></div>
-    </noscript>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+      
+      window.dataLayer.push ({
+      	"ecommerce": {
+      		"detail" : {
+      			"products": [{
+      				"id": ip
+      			}]
+      		}
+      	}
+      });
+      
+    </script>
     <div class="card-wraper">
       <div class="card">
         <div class="header_card"><img src="/assets/img/logo.gif" class="logo"/>
@@ -67,61 +83,55 @@
         <hr class="devider"/>
         <div class="main_container">
           <div class="user_container">
-            <div class="author-profile--page"><img src="/assets/img/pic.jpeg" alt="Profile of Myzin Sergei" class="author-profile--avatar"/>
+            <div class="author-profile--page"><img src="/assets/img/avatar.png" alt="Profile of Myzin Sergei" class="author-profile--avatar"/>
               <h1 class="author-name"><a href="/@Myzin" title="Profile of Myzin Sergei" aria-label="Profile of Myzin Sergei" class="author-name--link">Myzin Sergei</a></h1>
               <p class="author-description">I am a self-taught developer and already I can't get enough of coding. My favorite tools are Sass, Jade, jQuery if we consider front-end development. In Back-end I use Python and learn Ruby (of course with relevant frameworks) because I am fully convinced that this tools are the most powerful than others.</p>
               <p class="author-description">Also I have some experience in Illustration and PhotoShop and once in a blue moon I draw some for myself.</p>
               <p class="author-description skills-header">Main knowledge in:</p>
             </div>
-            <div class="skills-preview"> 
+            <div class="skills-preview">
               <ul class="skills-preview__list">
-                <li>
-                  <div class="item-desc"><i class="fa fa-html5"></i><span class="item">HTML</span></div>
-                  <div class="item-progress">
-                    <div data-progress="html" class="stars"><span class="persent-prog"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="item-desc"><i class="fa fa-css3"></i><span class="item">CSS</span></div>
-                  <div class="item-progress">
-                    <div data-progress="css" class="stars"><span class="persent-prog"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="item-desc"><i class="icon-python"></i><span class="item">Python</span></div>
-                  <div class="item-progress">
-                    <div data-progress="python" class="stars"><span class="persent-prog"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></span>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="item-desc"><i class="icon-javascript"></i><span class="item">JS</span></div>
-                  <div class="item-progress">
-                    <div data-progress="js" class="stars"><span class="persent-prog"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="item-desc"><i class="icon-blackberry"></i><span class="item">jQuery</span></div>
-                  <div class="item-progress">
-                    <div data-progress="jq" class="stars"><span class="persent-prog"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="item-desc"><i class="icon-ruby"></i><span class="item">Ruby</span></div>
-                  <div class="item-progress">
-                    <div data-progress="ruby" class="stars"><span class="persent-prog"><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
-                    </div>
-                  </div>
-                </li>
+                              <li>
+                                <div class="item-desc"><i class="fa fa-html5"></i><span class="item">HTML</span></div>
+                                <div class="item-progress">
+                                  <div data-progress="html" class="stars"><span class="persent-prog"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="item-desc"><i class="fa fa-css3"></i><span class="item">CSS</span></div>
+                                <div class="item-progress">
+                                  <div data-progress="css" class="stars"><span class="persent-prog"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span></div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="item-desc"><i class="icon-python"></i><span class="item">Python</span></div>
+                                <div class="item-progress">
+                                  <div data-progress="python" class="stars"><span class="persent-prog"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></span></div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="item-desc"><i class="icon-javascript"></i><span class="item">JS</span></div>
+                                <div class="item-progress">
+                                  <div data-progress="js" class="stars"><span class="persent-prog"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span></div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="item-desc"><i class="icon-blackberry"></i><span class="item">jQuery</span></div>
+                                <div class="item-progress">
+                                  <div data-progress="jquery" class="stars"><span class="persent-prog"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span></div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="item-desc"><i class="icon-ruby"></i><span class="item">Ruby</span></div>
+                                <div class="item-progress">
+                                  <div data-progress="ruby" class="stars"><span class="persent-prog"><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span></div>
+                                </div>
+                              </li>
               </ul>
             </div>
             <div id="buttons-nav" class="author-profile--information">
               <button title="All" arial-label="All" data-tag="all" class="button-skills --active"><span>All</span></button>
-              <button title="Landing Page" arial-label="Landing Page" data-tag="lp" class="button-skills"><span>Landing Page</span></button>
+              <button title="Layout" arial-label="Layout" data-tag="layout" class="button-skills"><span>Layout</span></button>
               <button title="CodePen" arial-label="CodePen" data-tag="codepen" class="button-skills"><span>CodePen</span></button>
               <button title="Python" arial-label="Python" data-tag="python" style="display: none;" class="button-skills"><span>Python</span></button>
               <button title="Ruby" arial-label="Ruby" data-tag="ruby" style="display: none;" class="button-skills"><span>Ruby</span></button>
@@ -134,31 +144,36 @@
                   <div class="spinner spinner-bounce-bottom"></div>
                 </div>
               </div>
-              <div data-view="codepen" class="post-block">
-                <p class="post-block--header">Futurama</p><img src="/assets/img/futurama-post.png" class="post-block--img"/>
-                <p class="post-block--description">Futurama Tribute Page tell us about the main characters of this serial</p>
-                <p class="post-block--tags">Sass, Jade</p><a href="http://github.devmonkeys.xyz/freecodecamp-solutions/basic_front_end_development_projects/tribute_page/" title="Peek details" arial-label="Peek details" class="post-block--link">Look it</a>
-              </div>
-              <div data-view="lp" class="post-block">
-                <p class="post-block--header">Assassin’s Creed: Unity</p><img src="https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg" class="post-block--img"/>
-                <p class="post-block--description">Проводим глубокий анализ игры Assassin’s Creed: Unity</p>
-                <p class="post-block--tags">CSS3, Jade, JS</p><a href="http://github.devmonkeys.xyz/posts/assassins-creed-unity" title="Peek details" arial-label="Peek details" class="post-block--link">Look it</a>
-              </div>
-              <div data-view="codepen" class="post-block">
-                <p class="post-block--header">Illustration</p><img src="/assets/img/earth_illustration-post.png" class="post-block--img"/>
-                <p class="post-block--description">Animated Earth Illustration only with CSS and HTML (without any JS)</p>
-                <p class="post-block--tags">Sass, Jade</p><a href="http://codepen.io/therealnorman/full/YWqJXZ/" title="Peek details" arial-label="Peek details" class="post-block--link">Look it</a>
-              </div>
-              <div data-view="codepen" class="post-block">
-                <p class="post-block--header">Twitter widget</p><img src="/assets/img/twitter-post.png" class="post-block--img"/>
-                <p class="post-block--description">Redesign a small twitter widget based on Dribbble Illustration</p>
-                <p class="post-block--tags">Sass, Jade</p><a href="http://codepen.io/therealnorman/full/YWwWdP/" title="Peek details" arial-label="Peek details" class="post-block--link">Look it</a>
-              </div>
-              <div data-view="codepen" class="post-block">
-                <p class="post-block--header">Registration card</p><img src="/assets/img/egistration_card-post.png" class="post-block--img"/>
-                <p class="post-block--description">Code registration card based on Dribbble Illustration</p>
-                <p class="post-block--tags">Sass, Jade</p><a href="http://codepen.io/therealnorman/full/zBrmRo/" title="Peek details" arial-label="Peek details" class="post-block--link">Look it</a>
-              </div>
+                          <div data-view="layout" class="post-block">
+                            <p class="post-block--header">Futurama</p><img src="/assets/img/futurama-post.png" class="post-block--img"/>
+                            <p class="post-block--description">Futurama Tribute Page tell us about the main characters of this serial</p>
+                            <p class="post-block--tags"><span>Sass/</span><span>Jade</span>
+                            </p><a href="http://github.devmonkeys.xyz/freecodecamp-solutions/basic_front_end_development_projects/tribute_page/" title="Peek details" arial-label="Peek details" target="_blank" class="post-block--link">Look it</a>
+                          </div>
+                          <div data-view="layout" class="post-block">
+                            <p class="post-block--header">Assassin’s Creed: Unity</p><img src="https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg" class="post-block--img"/>
+                            <p class="post-block--description">Make depth analysis of Assassin’s Creed: Unity</p>
+                            <p class="post-block--tags"><span>CSS3/</span><span>Jade/</span><span>JS</span>
+                            </p><a href="http://github.devmonkeys.xyz/posts/assassins-creed-unity" title="Peek details" arial-label="Peek details" target="_blank" class="post-block--link">Look it</a>
+                          </div>
+                          <div data-view="codepen" class="post-block">
+                            <p class="post-block--header">Illustration</p><img src="/assets/img/earth_illustration-post.png" class="post-block--img"/>
+                            <p class="post-block--description">Animated Earth Illustration only with CSS and HTML (without any JS)</p>
+                            <p class="post-block--tags"><span>Sass/</span><span>Jade</span>
+                            </p><a href="http://codepen.io/therealnorman/full/YWqJXZ/" title="Peek details" arial-label="Peek details" target="_blank" class="post-block--link">Look it</a>
+                          </div>
+                          <div data-view="codepen" class="post-block">
+                            <p class="post-block--header">Twitter widget</p><img src="/assets/img/twitter-post.png" class="post-block--img"/>
+                            <p class="post-block--description">Redesign a small twitter widget based on Dribbble Illustration</p>
+                            <p class="post-block--tags"><span>Sass/</span><span>Jade</span>
+                            </p><a href="http://codepen.io/therealnorman/full/YWwWdP/" title="Peek details" arial-label="Peek details" target="_blank" class="post-block--link">Look it</a>
+                          </div>
+                          <div data-view="codepen" class="post-block">
+                            <p class="post-block--header">Registration card</p><img src="/assets/img/egistration_card-post.png" class="post-block--img"/>
+                            <p class="post-block--description">Code registration card based on Dribbble Illustration</p>
+                            <p class="post-block--tags"><span>Sass/</span><span>Jade</span>
+                            </p><a href="http://codepen.io/therealnorman/full/zBrmRo/" title="Peek details" arial-label="Peek details" target="_blank" class="post-block--link">Look it</a>
+                          </div>
             </div>
           </div>
         </div>
@@ -181,18 +196,33 @@
           </div>
         </div>
         <div class="submit-button"><a href="#" title="Contact Me" id="hire" class="hire_me">Contact me</a>
-          <div id="px" style="display: none;"></div>
+          <div id="px" style="display: none;"></div><a href="/assets/files/S.M._resume.pdf" title="Resume" id="resume" target="_blank" class="resume">Resume (PDF)</a>
+        </div>
+        <hr style="margin-top: 20px !important;" class="devider"/>
+        <div class="social-links">
+          <h3>Social accounts</h3><a href="http://codepen.io/therealnorman/" target="_blank" title="CodePen">
+                    <button title="CodePen account" aria-label="CodePen account" class="social_button"><i class="fa fa-codepen fa-3x"></i></button></a><a href="https://www.linkedin.com/in/sergey-myzin-825b9b5" target="_blank" title="LinkedIn">
+                    <button title="LinkedIn account" aria-label="LinkedIn account" class="social_button"><i class="fa fa-linkedin fa-3x"></i></button></a><a href="https://www.freecodecamp.com/smyzin" target="_blank" title="FCC">
+                    <button title="FCC account" aria-label="FCC account" class="social_button"><i class="fa fa-fire fa-3x"></i></button></a><a href="https://github.com/smyzin" target="_blank" title="GitHub">
+                    <button title="GitHub account" aria-label="GitHub account" class="social_button"><i class="fa fa-github fa-3x"></i></button></a>
         </div>
       </div>
     </div>
     <script type="text/javascript">
       var isModal;
-      function modalCheck(winPopup){
-      	if(isModal){
-      		console.log('Close');
-      		isModal.close();
-      		isModal = '';
+      function modalCheck(winPopup, modalWin){
+      	if(modalWin != ''){
+      		if(isModal){
+      			console.log('Close');
+      			isModal.close();
+      			isModal = '';
       
+      		}else{
+      			var modal = new tingle.modal();
+      			isModal = modal;
+      			modal.setContent(document.querySelector(winPopup).innerHTML);
+      			modal.open();
+      		}
       	}else{
       		var modal = new tingle.modal();
       		isModal = modal;
@@ -202,7 +232,7 @@
       }
       $('#hire').on('click', function(e){
       	e.preventDefault();
-      	modalCheck('#form-sub');
+      	modalCheck('#form-sub', '');
       
       	$('#name-field').on('input', function() {
       		var input=$(this);
@@ -236,7 +266,7 @@
       			console.log("Email is invalid");
       		}
       	});
-      });	
+      });
       
       function sendMail() {
       	var data = {};
@@ -245,7 +275,7 @@
       	data.name = form.find('[name="name"]').val();
       	data.email = form.find('[name="email"]').val();
       	data.message = form.find('[name="comment"]').val();
-      	
+      
       	if($('#name-field').hasClass("valid") && $('#email-field').hasClass("valid")){
       
       		if(data.message != ''){

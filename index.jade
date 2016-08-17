@@ -53,12 +53,12 @@ html
 					d.addEventListener("DOMContentLoaded", f, false);
 				} else { f(); }
 			})(document, window, "yandex_metrika_callbacks");
-		
+
 		//- <!-- /Yandex.Metrika counter -->
-		
+
 		script(type="text/javascript").
 			window.dataLayer = window.dataLayer || [];
-			
+
 			window.dataLayer.push ({
 				"ecommerce": {
 					"detail" : {
@@ -82,99 +82,40 @@ html
 				.main_container
 					.user_container
 						.author-profile--page
-							img(src="/assets/img/pic.jpeg" class="author-profile--avatar" alt="Profile of Myzin Sergei")
+							img(src="/assets/img/avatar.png" class="author-profile--avatar" alt="Profile of Myzin Sergei")
 							h1.author-name
 								a(href='/@Myzin', title="Profile of Myzin Sergei", aria-label="Profile of Myzin Sergei").author-name--link Myzin Sergei
 							p.author-description I am a self-taught developer and already I can't get enough of coding. My favorite tools are Sass, Jade, jQuery if we consider front-end development. In Back-end I use Python and learn Ruby (of course with relevant frameworks) because I am fully convinced that this tools are the most powerful than others.
 							p.author-description Also I have some experience in Illustration and PhotoShop and once in a blue moon I draw some for myself.
 							p.author-description.skills-header Main knowledge in:
-						
-						.skills-preview 
+
+						.skills-preview
+							-var starList = [{icon: 'fa fa-html5', name: 'HTML', numStars: 5}, {icon: 'fa fa-css3', name: 'CSS', numStars: 5}, {icon: 'icon-python', name: 'Python', numStars: 4}, {icon: 'icon-javascript', name: 'JS', numStars: 3}, {icon: 'icon-blackberry', name: 'jQuery', numStars: 3}, {icon: 'icon-ruby', name: 'Ruby', numStars: 1}];
+							mixin skill-stars(skill)
+								li
+									.item-desc
+										i(class=skill.icon)
+										span.item= skill.name
+									.item-progress
+										.stars(data-progress=skill.name.toLowerCase())
+											span.persent-prog
+												-for(var i = 0; i < skill.numStars; i++){
+													i.fa.fa-star
+												-}
+												if skill.numStars < 5
+													-for(var i=0; i < 5 -skill.numStars; i++){
+														i.fa.fa-star-o
+													-}
+
 							ul.skills-preview__list
-								li
-									.item-desc
-										i.fa.fa-html5
-										span.item HTML
-									.item-progress
-										.stars(data-progress='html')
-											//- .progress(data-progress='html')
-											span.persent-prog
-												i.fa.fa-star
-												i.fa.fa-star
-												i.fa.fa-star
-												i.fa.fa-star
-												i.fa.fa-star
-								li
-									.item-desc
-										i.fa.fa-css3
-										span.item CSS
-									.item-progress
-										.stars(data-progress='css')
-											//- .progress(data-progress='css')
-											span.persent-prog
-												i.fa.fa-star
-												i.fa.fa-star
-												i.fa.fa-star
-												i.fa.fa-star
-												i.fa.fa-star
-								li
-									.item-desc
-										i.icon-python
-										span.item Python
-									.item-progress
-										.stars(data-progress='python')
-											//- .progress(data-progress='python')
-											span.persent-prog
-												i.fa.fa-star
-												i.fa.fa-star
-												i.fa.fa-star
-												i.fa.fa-star
-												i.fa.fa-star-o
-								li
-									.item-desc
-										i.icon-javascript
-										span.item JS
-									.item-progress
-										.stars(data-progress='js')
-											//- .progress(data-progress='js')
-											span.persent-prog
-												i.fa.fa-star
-												i.fa.fa-star
-												i.fa.fa-star
-												i.fa.fa-star-o
-												i.fa.fa-star-o
-								li
-									.item-desc
-										i.icon-blackberry
-										span.item jQuery
-									.item-progress
-										.stars(data-progress='jq')
-											//- .progress(data-progress='ror')
-											span.persent-prog
-												i.fa.fa-star
-												i.fa.fa-star
-												i.fa.fa-star
-												i.fa.fa-star-o
-												i.fa.fa-star-o
-								li
-									.item-desc
-										i.icon-ruby
-										span.item Ruby
-									.item-progress
-										.stars(data-progress='ruby')
-											//- .progress(data-progress='ruby')
-											span.persent-prog
-												i.fa.fa-star
-												i.fa.fa-star-o
-												i.fa.fa-star-o
-												i.fa.fa-star-o
-												i.fa.fa-star-o
+								for skill in starList
+									+skill-stars(skill)
 
 						.author-profile--information(id='buttons-nav')
 							button.button-skills.--active(title='All', arial-label='All', data-tag='all')
 								span All
-							button.button-skills(title='Landing Page', arial-label='Landing Page', data-tag='lp')
-								span Landing Page
+							button.button-skills(title='Layout', arial-label='Layout', data-tag='layout')
+								span Layout
 							button.button-skills(title='CodePen', arial-label='CodePen', data-tag='codepen')
 								span CodePen
 							button.button-skills(title='Python', arial-label='Python', data-tag='python', style="display: none;")
@@ -182,41 +123,26 @@ html
 							button.button-skills(title='Ruby', arial-label='Ruby', data-tag='ruby', style="display: none;")
 								span Ruby
 						hr.devider(style='margin-top: 20px !important;')
+						- var workList = [{group: "layout", title: "Futurama", image: "/assets/img/futurama-post.png", description: "Futurama Tribute Page tell us about the main characters of this serial", tags: ["Sass/", "Jade"], link: "http://github.devmonkeys.xyz/freecodecamp-solutions/basic_front_end_development_projects/tribute_page/"}, {group: "layout", title: "Assassin’s Creed: Unity", image: "https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg", description: "Make depth analysis of Assassin’s Creed: Unity", tags: ["CSS3/", "Jade/", "JS"], link: "http://github.devmonkeys.xyz/posts/assassins-creed-unity"}, {group: "codepen", title: "Illustration", image: "/assets/img/earth_illustration-post.png", description: "Animated Earth Illustration only with CSS and HTML (without any JS)", tags: ["Sass/", "Jade"], link: "http://codepen.io/therealnorman/full/YWqJXZ/"}, {group: "codepen", title: "Twitter widget", image: "/assets/img/twitter-post.png", description: "Redesign a small twitter widget based on Dribbble Illustration", tags: ["Sass/", "Jade"], link: "http://codepen.io/therealnorman/full/YWwWdP/"}, {group: "codepen", title: "Registration card", image: "/assets/img/egistration_card-post.png", description: "Code registration card based on Dribbble Illustration", tags: ["Sass/", "Jade"], link: "http://codepen.io/therealnorman/full/zBrmRo/"}];
+
+						mixin work-card(work)
+							.post-block(data-view= work.group)
+								p.post-block--header= work.title
+								img.post-block--img(src=work.image)
+								p.post-block--description= work.description
+								p.post-block--tags
+									each tag in work.tags
+										span= tag
+								a.post-block--link(href=work.link, title='Peek details', arial-label='Peek details' target='_blank') Look it
+
 						.skill-container(data-view-tag="all")
 							.preloader
 							.spinners
 								.row
 									.spinner.spinner-bounce-bottom
-							.post-block(data-view="codepen")
-								p.post-block--header Futurama
-								img.post-block--img(src='/assets/img/futurama-post.png')
-								p.post-block--description Futurama Tribute Page tell us about the main characters of this serial
-								p.post-block--tags Sass, Jade
-								a.post-block--link(href='http://github.devmonkeys.xyz/freecodecamp-solutions/basic_front_end_development_projects/tribute_page/', title='Peek details', arial-label='Peek details') Look it
-							.post-block(data-view="lp")
-								p.post-block--header Assassin’s Creed: Unity
-								img.post-block--img(src='https://level-design.ru/wp-content/uploads/2016/03/acu-1200x600.jpg')
-								p.post-block--description Проводим глубокий анализ игры Assassin’s Creed: Unity
-								p.post-block--tags CSS3, Jade, JS
-								a.post-block--link(href='http://github.devmonkeys.xyz/posts/assassins-creed-unity', title='Peek details', arial-label='Peek details') Look it
-							.post-block(data-view="codepen")
-								p.post-block--header Illustration
-								img.post-block--img(src='/assets/img/earth_illustration-post.png')
-								p.post-block--description Animated Earth Illustration only with CSS and HTML (without any JS)
-								p.post-block--tags Sass, Jade
-								a.post-block--link(href='http://codepen.io/therealnorman/full/YWqJXZ/', title='Peek details', arial-label='Peek details') Look it
-							.post-block(data-view="codepen")
-								p.post-block--header Twitter widget
-								img.post-block--img(src='/assets/img/twitter-post.png')
-								p.post-block--description Redesign a small twitter widget based on Dribbble Illustration
-								p.post-block--tags Sass, Jade
-								a.post-block--link(href='http://codepen.io/therealnorman/full/YWwWdP/', title='Peek details', arial-label='Peek details') Look it
-							.post-block(data-view="codepen")
-								p.post-block--header Registration card
-								img.post-block--img(src='/assets/img/egistration_card-post.png')
-								p.post-block--description Code registration card based on Dribbble Illustration
-								p.post-block--tags Sass, Jade
-								a.post-block--link(href='http://codepen.io/therealnorman/full/zBrmRo/', title='Peek details', arial-label='Peek details') Look it
+
+							for work in workList
+								+work-card(work)
 
 				hr.post--point(data-symbol="∞")
 
@@ -243,6 +169,22 @@ html
 				.submit-button
 					a.hire_me(href='#' title='Contact Me' id='hire') Contact me
 					div(id='px' style='display: none;')
+					a.resume(href='/assets/files/S.M._resume.pdf' title='Resume' id='resume' target='_blank') Resume (PDF)
+
+
+				hr.devider(style='margin-top: 20px !important;')
+				- var socialList = [{name: 'CodePen', icon: 'fa fa-codepen', link: 'http://codepen.io/therealnorman/'}, {name: 'LinkedIn', icon: 'fa fa-linkedin', link: 'https://www.linkedin.com/in/sergey-myzin-825b9b5'}, {name: 'FCC', icon: 'fa fa-fire', link: 'https://www.freecodecamp.com/smyzin'}, {name: 'GitHub', icon: 'fa fa-github', link: 'https://github.com/smyzin'}];
+
+				mixin social-card(social)
+					a(href=social.link target='_blank' title=social.name)
+						button.social_button(title=social.name + ' account' aria-label=social.name + ' account')
+							i(class=social.icon + ' fa-3x')
+
+				.social-links
+					h3 Social accounts
+					for social in socialList
+						+social-card(social)
+
 
 
 		script(type='text/javascript').
@@ -266,21 +208,6 @@ html
 					modal.setContent(document.querySelector(winPopup).innerHTML);
 					modal.open();
 				}
-				//- if(isModal){
-				//- 	console.log('Close');
-				//- 	isModal.close();
-				//- 	isModal = '';
-
-				//- }else{
-				//- 	var modal = new tingle.modal({
-				//- 		onClose: function() {
-				//- 			console.log("Close modal");
-				//- 		}
-				//- 	});
-				//- 	isModal = modal;
-				//- 	modal.setContent(document.querySelector(winPopup).innerHTML);
-				//- 	modal.open();
-				//- }
 			}
 			$('#hire').on('click', function(e){
 				e.preventDefault();
@@ -318,7 +245,7 @@ html
 						console.log("Email is invalid");
 					}
 				});
-			});	
+			});
 
 			function sendMail() {
 				var data = {};
@@ -327,7 +254,7 @@ html
 				data.name = form.find('[name="name"]').val();
 				data.email = form.find('[name="email"]').val();
 				data.message = form.find('[name="comment"]').val();
-				
+
 				if($('#name-field').hasClass("valid") && $('#email-field').hasClass("valid")){
 
 					if(data.message != ''){

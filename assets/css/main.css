@@ -692,8 +692,8 @@ input[type="button"]:focus {
 .author-profile--avatar {
   position: inherit;
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 100%;
   vertical-align: middle;
   float: right;
@@ -1440,6 +1440,8 @@ input[type="button"]:focus {
 
 .hire_me {
   padding: 10px 30px;
+  display: inline-block;
+  margin: 10px 5px;
 }
 
 .hire_me, #submit {
@@ -1551,4 +1553,62 @@ input[type="button"]:focus {
 
 .bounce {
   animation: bounce-i 1.5s ease-in-out 0s 1;
+}
+
+.resume {
+  padding: 10px 30px;
+  margin: 10px 5px;
+}
+
+.resume {
+  display: inline-block;
+  vertical-align: middle  !important;
+  background-color: #fff !important;
+  color: #30A6C7  !important;
+  line-height: 38px  !important;
+  letter-spacing: .1rem  !important;
+  text-transform: uppercase;
+  font-size: 17px  !important;
+  border-radius: 4px;
+  font-weight: 300 !important;
+  border: 1px solid #bbb;
+}
+
+.resume:hover {
+  background-color: #30A6C7  !important;
+  border: 1px solid #26839D  !important;
+  color: #fff  !important;
+  text-decoration: none;
+}
+
+.resume:active {
+  background-color: #30A6C7  !important;
+  border: 1px solid #26839D  !important;
+  color: #fff  !important;
+}
+
+.social-links {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.social-links a {
+  height: auto;
+  display: inline-block;
+}
+
+.social-links a button {
+  padding: 0 20px;
+}
+
+.social_button {
+  border: 0;
+}
+
+.social_button i {
+  color: #666;
+}
+
+.social_button i:hover {
+  color: #2c92af;
 }
